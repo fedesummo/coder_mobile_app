@@ -1,11 +1,14 @@
 import { View, StyleSheet } from "react-native";
-import colors from "~constants/colors"
+import { useAppContext } from "~context/App";
+import colors from "~constants/colors";
+import Welcome from "~screens/Welcome";
+import Home from "~screens/Home";
 
-const AppContainer = (props) => {
+const AppContainer = () => {
+  const { username } = useAppContext();
   return (
-    <View style={styles.container}>
-      {props.children}
-    </View>
+    <View style={styles.container}><Home /></View>
+    // <View style={styles.container}>{username ? <Home /> : <Welcome />}</View>
   );
 };
 

@@ -1,5 +1,7 @@
 import fontSizes from "~constants/fontSizes";
 import snLogo from "./assets/sn-logo.png";
+import { useState, useRef } from "react";
+import { useAppContext } from "~context/App";
 import colors from "~constants/colors";
 import {
   View,
@@ -8,23 +10,27 @@ import {
   Image,
   TextInput,
   Pressable,
+  Alert,
 } from "react-native";
-import { useState, useEffect, useRef } from "react";
 
 const Welcome = () => {
-  const [username, setUsername] = useState("");
-  const [error, setError] = useState("");
-
+  const [enteredUsername, setEnteredUsername] = useState("");
   const inputRef = useRef();
 
-  const onChangeText = (input) => setUsername(input);
+  const { setUsername } = useAppContext();
+
+  const onChangeText = (input) => setEnteredUsername(input);
 
   const submitUsername = () => {
-    if (username) {
-      setError("");
+    if (enteredUsername) {
+      setUsername(enteredUsername);
       inputRef.current.blur();
     } else {
-      setError("No te olvides de ingresar tu nombre");
+      Alert.alert(
+        "No olvides ingresar tu nombre",
+        "Utilizaremos ese dato para brindarte una experiencia personalizada, no lo compartiremos con nadie",
+        [{ text: "Volver" }]
+      );
       inputRef.current.focus();
     }
   };
@@ -37,19 +43,14 @@ const Welcome = () => {
           <Image source={snLogo} style={styles.logo} />
         </View>
 
-        <View style={styles.inputContainer}>
-          {/* Input */}
-          <TextInput
-            ref={inputRef}
-            value={username}
-            style={styles.input}
-            onChangeText={onChangeText}
-            placeholder="Introduce tu nombre aquí..."
-          />
-
-          {/* Error message */}
-          {!!error && <Text style={{ textAlign: "center" }}>{error}</Text>}
-        </View>
+        {/* Input */}
+        <TextInput
+          ref={inputRef}
+          value={enteredUsername}
+          style={styles.input}
+          onChangeText={onChangeText}
+          placeholder="Introduce tu nombre aquí..."
+        />
 
         {/* Button */}
         <Pressable style={styles.btn} onPress={submitUsername}>
@@ -76,10 +77,6 @@ const styles = StyleSheet.create({
     height: undefined,
     aspectRatio: 2.2,
   },
-  inputContainer: {
-    marginTop: 80,
-    marginBottom: 15,
-  },
   input: {
     borderWidth: 1,
     borderRadius: 30,
@@ -87,6 +84,8 @@ const styles = StyleSheet.create({
     fontSize: fontSizes.general,
     paddingVertical: 15,
     borderColor: colors.black,
+    marginTop: 80,
+    marginBottom: 15,
   },
   btn: {
     borderRadius: 30,

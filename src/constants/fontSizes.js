@@ -1,6 +1,6 @@
 const fontSizes = {
   general: 16,
-  heading: 20,
+  title: 45,
 };
 
 export default fontSizes;

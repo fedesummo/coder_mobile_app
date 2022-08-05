@@ -1,12 +1,11 @@
-import { Text } from "react-native";
 import AppContainer from "~components/AppContainer";
-import Welcome from "~screens/Welcome";
+import { AppContextProvider } from "~context/App";
 
 const App = () => {
   return (
-    <AppContainer>
-      <Welcome />
-    </AppContainer>
+    <AppContextProvider>
+      <AppContainer/>
+    </AppContextProvider>
   );
 };
 

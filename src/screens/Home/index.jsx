@@ -15,16 +15,15 @@ const Home = () => {
 
   return (
     <View style={styles.screenContainer}>
-      <Header title={`¡Hola, ${username}!`} />
-      <View style={styles.listContainer}>
-        <FlatList
-          data={places}
-          renderItem={renderItem}
-          keyExtractor={(item) => item.id}
-          numColumns={2}
-          columnWrapperStyle={{justifyContent: 'space-between'}}
-        />
-      </View>
+      <FlatList
+        ListHeaderComponent={<Header title={`¡Hola, ${username}!`} />}
+        showsVerticalScrollIndicator={false}
+        data={places}
+        renderItem={renderItem}
+        keyExtractor={(item) => item.id}
+        numColumns={2}
+        columnWrapperStyle={{ justifyContent: "space-between" }}
+      />
     </View>
   );
 };
@@ -33,24 +32,22 @@ export default Home;
 
 const styles = StyleSheet.create({
   screenContainer: {
-    marginHorizontal: 25
-  },
-  listContainer: {
-    // flexDirection: "row"
+    marginHorizontal: 25,
   },
   container: {
     backgroundColor: colors.loader,
-    marginBottom: 15,
-    borderRadius: 25,
-    height: 200,
     width: "47%",
+    height: 220,
+    marginBottom: 15,
     justifyContent: "flex-end",
+    borderRadius: 25,
   },
   title: {
+    width: "80%",
     marginLeft: 15,
     marginBottom: 8,
     color: "white",
-    fontSize: 23,
-    fontWeight: 200
-  }
+    fontSize: 20,
+    fontWeight: "500",
+  },
 });

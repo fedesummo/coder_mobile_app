@@ -7,8 +7,7 @@ import Home from "~screens/Home";
 const AppContainer = () => {
   const { username } = useAppContext();
   return (
-    <View style={styles.container}><Home /></View>
-    // <View style={styles.container}>{username ? <Home /> : <Welcome />}</View>
+    <View style={styles.container}>{username ? <Home /> : <Welcome />}</View>
   );
 };
 

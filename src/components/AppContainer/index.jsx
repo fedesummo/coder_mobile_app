@@ -4,10 +4,15 @@ import colors from "~constants/colors";
 import Welcome from "~screens/Welcome";
 import Home from "~screens/Home";
 
+import Rewards from "~screens/Rewards";
+
 const AppContainer = () => {
   const { username } = useAppContext();
   return (
-    <View style={styles.container}>{username ? <Home /> : <Welcome />}</View>
+    <View style={styles.container}>
+      <Rewards />
+    </View>
+    // <View style={styles.container}>{username ? <Home /> : <Welcome />}</View>
   );
 };
 

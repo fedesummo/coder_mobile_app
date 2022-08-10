@@ -2,7 +2,8 @@ import { View, Text, Image, StyleSheet } from "react-native";
 import colors from "~constants/colors";
 import fontSizes from "~constants/fontSizes";
 
-import checkboxIcon from "../assets/checkbox.png";
+import checkboxIcon from "../assets/checked.png";
+// import checkboxIcon from "../assets/unchecked.png";
 import padlockIcon from "../assets/padlock.png";
 
 const Reward = (props) => {

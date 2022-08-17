@@ -2,9 +2,10 @@ import { View, Text, Image, StyleSheet } from "react-native";
 import colors from "~constants/colors";
 import fontSizes from "~constants/fontSizes";
 
+// corregir nombre de los icons
 import Points from "~components/Points";
-
-import checkboxIcon from "../assets/checkbox.png";
+import checkboxIcon from "../assets/checked.png";
+// import checkboxIcon from "../assets/unchecked.png";
 import padlockIcon from "../assets/padlock.png";
 
 import { useAppContext } from "~context/App";

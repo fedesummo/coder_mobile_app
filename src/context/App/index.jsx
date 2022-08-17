@@ -6,8 +6,7 @@ export const useAppContext = () => useContext(AppContext);
 
 export const AppContextProvider = (props) => {
   const [username, setUsername] = useState();
-
-  const [userPoints, setUserPoints] = useState(75);
+  const [userPoints, setUserPoints] = useState(30);
 
   return (
     <AppContext.Provider

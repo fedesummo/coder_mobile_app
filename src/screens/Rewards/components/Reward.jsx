@@ -2,37 +2,39 @@ import { View, Text, Image, StyleSheet } from "react-native";
 import colors from "~constants/colors";
 import fontSizes from "~constants/fontSizes";
 
+import Points from "~components/Points";
+
 import checkboxIcon from "../assets/checkbox.png";
 import padlockIcon from "../assets/padlock.png";
 
+import { useAppContext } from "~context/App";
+import { useEffect } from "react";
+
 const Reward = (props) => {
   const { name, description, requiredPoints } = props.data;
+  const { userPoints } = useAppContext();
 
   return (
-
     <View style={styles.container}>
       {/* Body */}
       <View style={styles.bodyContainer}>
-        {/* Img */}
-        <View></View>
-
         {/* Text */}
         <View>
           <Text style={styles.name}>{name}</Text>
           <Text style={styles.description}>{description}</Text>
         </View>
 
-        <Image source={null} />
-
         {/* Points */}
-        {/* <View>
-          <Text>{requiredPoints}</Text>
-        </View> */}
+        <Points value={requiredPoints} />
       </View>
 
       {/* Indicator */}
       <View style={styles.iconContainer}>
-        <Image source={checkboxIcon} style={styles.icon}/>
+        <Image
+          source={(() =>
+            userPoints >= requiredPoints ? checkboxIcon : padlockIcon)()}
+          style={styles.icon}
+        />
       </View>
     </View>
   );
@@ -43,10 +45,12 @@ export default Reward;
 const styles = StyleSheet.create({
   container: {
     position: "relative",
+    flexDirection: "row",
     paddingBottom: 20,
     marginBottom: 15,
   },
   bodyContainer: {
+    flex: 1,
     flexDirection: "row",
     backgroundColor: colors.loader,
     borderRadius: 10,
@@ -54,10 +58,13 @@ const styles = StyleSheet.create({
     paddingHorizontal: 10,
   },
   name: {
-    fontSize: 20
+    fontSize: 20,
+    alignSelf: "flex-start",
   },
   description: {
-    fontSize: fontSizes.general
+    width: 260,
+    fontSize: fontSizes.general,
+    alignSelf: "flex-start",
   },
   iconContainer: {
     backgroundColor: colors.loader,
@@ -73,5 +80,5 @@ const styles = StyleSheet.create({
     height: undefined,
     aspectRatio: 1,
     // backgroundColor: colors.loader,
-  }
+  },
 });

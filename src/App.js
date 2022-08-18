@@ -1,4 +1,3 @@
-import AppContainer from "~components/AppContainer";
 import { AppContextProvider } from "~context/App";
 import AppNavigator from "~navigation";
 

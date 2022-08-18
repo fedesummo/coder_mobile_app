@@ -1,6 +1,7 @@
 import { FlatList, Text, View, StyleSheet } from "react-native";
+import EmptyTopContainer from "~components/EmptyTopContainer";
 import { useAppContext } from "~context/App";
-import Header from "~components/Header";
+import ScreenContainer from "~components/ScreenContainer";
 import places from "~constants/places";
 import colors from "~constants/colors";
 
@@ -14,26 +15,23 @@ const Discover = ({ navigation }) => {
   );
 
   return (
-    <View style={styles.screenContainer}>
+    <ScreenContainer>
       <FlatList
-        ListHeaderComponent={<Header title={`¡Hola, ${username}!`} />}
         showsVerticalScrollIndicator={false}
         data={places}
+        ListHeaderComponent={<EmptyTopContainer />}
         renderItem={renderItem}
         keyExtractor={(item) => item.id}
         numColumns={2}
         columnWrapperStyle={{ justifyContent: "space-between" }}
       />
-    </View>
+    </ScreenContainer>
   );
 };
 
 export default Discover;
 
 const styles = StyleSheet.create({
-  screenContainer: {
-    marginHorizontal: 25,
-  },
   container: {
     backgroundColor: colors.loader,
     width: "47%",

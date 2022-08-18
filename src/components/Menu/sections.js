@@ -1,15 +1,15 @@
 const sections = [
   {
-    id: 0,
     name: "Inicio",
+    screenName: "Home"
   },
   {
-    id: 1,
     name: "Descubrí",
+    screenName: "Discover"
   },
   {
-    id: 3,
     name: "Beneficios",
+    screenName: "Rewards"
   },
 ];
 

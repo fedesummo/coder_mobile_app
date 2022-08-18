@@ -1,10 +1,11 @@
 import AppContainer from "~components/AppContainer";
 import { AppContextProvider } from "~context/App";
+import AppNavigator from "~navigation";
 
 const App = () => {
   return (
     <AppContextProvider>
-      <AppContainer/>
+      <AppNavigator />
     </AppContextProvider>
   );
 };

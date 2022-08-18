@@ -13,7 +13,7 @@ import {
   Alert,
 } from "react-native";
 
-const Welcome = () => {
+const Welcome = ({ navigation }) => {
   const [enteredUsername, setEnteredUsername] = useState("");
   const inputRef = useRef();
 
@@ -24,7 +24,7 @@ const Welcome = () => {
   const submitUsername = () => {
     if (enteredUsername) {
       setUsername(enteredUsername);
-      inputRef.current.blur();
+      navigation.navigate("Home");
     } else {
       Alert.alert(
         "No olvides ingresar tu nombre",

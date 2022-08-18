@@ -1,8 +1,8 @@
 import { Modal, View, Text, Image, StyleSheet, Pressable } from "react-native";
 import arrowIcon from "./assets/arrow-back-icon.png";
 import fontSizes from "~constants/fontSizes";
-import sections from "~constants/sections";
 import colors from "~constants/colors";
+import sections from "./sections";
 
 const Menu = (props) => {
   return (
@@ -22,11 +22,17 @@ const Menu = (props) => {
         {/* Body */}
         <View style={styles.body}>
           <View style={styles.btnsContainer}>
-            {sections.map((element) => (
-              <Pressable style={styles.btnContainer} key={element.id}>
+            {sections.map((element) => {
+              console.log(navigation);
+              return
+              <Pressable
+                style={styles.btnContainer}
+                key={element.name}
+                onPress={() => navigation?.navigate("Home")}
+              >
                 <Text style={styles.btnText}>{element.name}</Text>
-              </Pressable>
-            ))}
+              </Pressable>;
+            })}
           </View>
         </View>
       </View>

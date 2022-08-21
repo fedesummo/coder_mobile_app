@@ -1,7 +1,6 @@
 import { FlatList, Text, View, StyleSheet } from "react-native";
-import EmptyTopContainer from "~components/EmptyTopContainer";
+import { ScreenContainer, Header } from "~components";
 import { useAppContext } from "~context/App";
-import ScreenContainer from "~components/ScreenContainer";
 import places from "~constants/places";
 import colors from "~constants/colors";
 
@@ -19,7 +18,7 @@ const Discover = ({ navigation }) => {
       <FlatList
         showsVerticalScrollIndicator={false}
         data={places}
-        ListHeaderComponent={<EmptyTopContainer />}
+        ListHeaderComponent={<Header heading="Descubrí" subHeading="¿Ya conocías estos lugares?"/>}
         renderItem={renderItem}
         keyExtractor={(item) => item.id}
         numColumns={2}

@@ -1,6 +1,12 @@
-import { View } from "react-native";
+import { View, Text } from "react-native";
 import styles from "./styles";
 
-const Container = (props) => {
-  return <View style={styles.container}>{props.children}</View>;
+const Container = ({ heading }) => {
+  return (
+    <View style={styles.container}>
+      {heading && <Text style={styles.heading}>{heading}</Text>}
+    </View>
+  );
 };
+
+export default Container;

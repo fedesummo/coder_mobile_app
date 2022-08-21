@@ -1,12 +1,12 @@
-import { Text, View } from "react-native";
+import { ScrollView, View } from "react-native";
 import styles from "./styles";
 
-const ScreenContainer = ({ children }) => {
+const ScreenContainer = ({ children, style }) => {
   return (
-    <View style={styles.container}>
+    <ScrollView style={{...styles.container, ...style}} showsVerticalScrollIndicator={false}>
       <View style={styles.topEmptyContainer}></View>
       {children}
-    </View>
+    </ScrollView>
   );
 };
 

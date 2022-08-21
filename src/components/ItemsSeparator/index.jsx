@@ -1,8 +1,8 @@
 import { View } from "react-native";
 import styles from "./styles";
 
-const EmptyTopContainer = () => {
+const ItemsSeparator = () => {
   return <View style={styles.container}></View>;
 };
 
-export default EmptyTopContainer;
+export default ItemsSeparator;

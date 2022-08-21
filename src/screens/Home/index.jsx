@@ -1,30 +1,43 @@
-import EmptyTopContainer from "~components/EmptyTopContainer";
-import ScreenContainer from "~components/ScreenContainer";
-import { View, Text, ScrollView, StyleSheet, FlatList } from "react-native";
-import Section from "./components/Section";
-import screens from "~constants/screens";
+import MostVisitedList from "./components/MostVisitedList";
+import { View, StyleSheet } from "react-native";
+import SectionHeader from "./components/SectionHeader";
+import { ScreenContainer, Header } from "~components";
+import NewsList from "./components/NewsList";
+import SectionsList from "./components/SectionsList";
 // import styles from "./styles";
 
-const Home = ({ navigation }) => {
-  const test = ["Descubrí", "Eventos", "Beneficios", "Novedades", "Ayuda"];
-
-  const renderSectionItems = ({ item }) => <Section data={item} />;
+const Home = () => {
 
   return (
-    <ScreenContainer>
-      <EmptyTopContainer />
+    <ScreenContainer style={{ paddingLeft: 8 }}>
+      <Header
+        heading="¡Hola, Federico!"
+        subHeading="¿Que actividad vas a hacer hoy?"
+      />
 
       {/* Sections */}
-      <View>
-        <Text style={styles.title}>Secciones</Text>
-        <FlatList horizontal data={test} renderItem={renderSectionItems} />
+      <View style={styles.sectionContainer}>
+        <SectionHeader heading="Secciones" />
+        <SectionsList />
+        
+      </View>
+
+      {/* News */}
+      <View style={styles.sectionContainer}>
+        <SectionHeader heading="Noticias" />
+        <NewsList />
       </View>
 
       {/* Most Visited */}
-      <View>
-        <Text style={styles.title}>Los más visitados</Text>
-        <FlatList horizontal data={test} />
+      <View style={styles.sectionContainer}>
+        <SectionHeader heading="Los más visitados" toScreen="Discover" />
+        <MostVisitedList />
       </View>
+
+      {/* Events */}
+      {/* <View>
+        <SectionHeader heading="Próximos eventos"/>
+      </View> */}
     </ScreenContainer>
   );
 };
@@ -32,11 +45,7 @@ const Home = ({ navigation }) => {
 export default Home;
 
 const styles = StyleSheet.create({
-  sectionsScrollView: {
-    // borderWidth: 1,
-  },
-  title: {
-    fontSize: 25,
-    fontWeight: "500",
+  sectionContainer: {
+    marginBottom: 15,
   },
 });

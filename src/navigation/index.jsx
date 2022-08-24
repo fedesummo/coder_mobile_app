@@ -1,5 +1,5 @@
+import { Welcome, Home, Menu, Discover, Place, Rewards } from "~screens/index";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
-import { Welcome, Home, Menu, Discover, Rewards } from "~screens/index";
 import { NavigationContainer } from "@react-navigation/native";
 
 const Stack = createNativeStackNavigator();
@@ -9,7 +9,7 @@ const AppNavigator = () => {
     <NavigationContainer>
       <Stack.Navigator
         // initialRouteName="Welcome"
-        initialRouteName="Home"
+        initialRouteName="Place"
         screenOptions={() => ({
           headerShown: false,
         })}
@@ -17,8 +17,9 @@ const AppNavigator = () => {
         <Stack.Screen name="Welcome" component={Welcome} />
         <Stack.Screen name="Home" component={Home} />
         <Stack.Screen name="Menu" component={Menu} />
-        <Stack.Screen name="Rewards" component={Rewards} />
         <Stack.Screen name="Discover" component={Discover} />
+        <Stack.Screen name="Place" component={Place} />
+        <Stack.Screen name="Rewards" component={Rewards} />
       </Stack.Navigator>
     </NavigationContainer>
   );

@@ -1,11 +1,11 @@
 import { StyleSheet, FlatList, View } from "react-native";
-import Container from "~components/Container";
-import places from "~constants/places";
+import { PlaceItem } from "~components";
+import { places } from "~constants";
 
 const MostVisitedList = () => {
   const renderItem = ({ item }) => (
     <View style={styles.container}>
-      <Container heading={item.name} />
+      <PlaceItem heading={item.name} />
     </View>
   );
 

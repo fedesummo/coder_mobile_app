@@ -1,11 +1,15 @@
 import { StyleSheet } from "react-native";
-import { colors } from "~constants";
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
+    height: 220,
+  },
+  imgContainer: {
+    width: "100%",
+    height: "100%",
     justifyContent: "flex-end",
-    backgroundColor: colors.loader,
+  },
+  img: {
     borderRadius: 20,
   },
   heading: {

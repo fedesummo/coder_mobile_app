@@ -1,15 +1,32 @@
 import { View, ImageBackground, ScrollView, Text } from "react-native";
-import styles from "./styles";
+import { useEffect, useCallback, useState } from "react";
+import { useRoute } from "@react-navigation/native";
 import { BackBtn, PrimaryBtn } from "~components";
-import img from "./test.jpg";
+import { places } from "~constants";
+import styles from "./styles";
 
 const Place = () => {
-  return (
+  const { params } = useRoute();
+
+  const [placeData, setPlaceData] = useState(null);
+
+  const getPlaceById = useCallback(
+    (id) => {
+      const data = places.find((element) => element.id === id);
+      setPlaceData(data);
+    },
+    [places, setPlaceData]
+  );
+
+  useEffect(() => getPlaceById(params.id), [params]);
+  // useEffect(() => console.log(placeData), [placeData]);
+
+  return placeData ? (
     <View style={styles.screenContainer}>
       <ImageBackground
         style={styles.imgContainer}
         imageStyle={{ height: "100%" }}
-        source={img}
+        source={placeData.img}
         resizeMode="cover"
       >
         <View style={styles.backBtn}>
@@ -17,18 +34,17 @@ const Place = () => {
         </View>
       </ImageBackground>
       <ScrollView style={styles.bodyContainer}>
-        <Text style={styles.heading}>Autódromo</Text>
-        <Text style={styles.gralText}>
-          {
-            "Fue inaugurado en 2019 dentro de un predio ferial de 90 hectáreas ubicado en el km 255 de la Autopista que une Buenos Aires con Rosario.\nEn su interior se realizan cada año eventos deportivos y empresariales, exposiciones a cielo abierto y convenciones.\nEl trazado de la pista permite recibir a todas las categorías automovilísitcas nacionales e internacionales"
-          }
-        </Text>
+        <Text style={styles.heading}>{placeData.name}</Text>
+        <Text style={styles.gralText}>{placeData.description}</Text>
         <View style={styles.bodyBtn}>
           <PrimaryBtn text="Marcar como visitado" />
         </View>
       </ScrollView>
     </View>
+  ) : (
+    <></>
   );
 };
 
+// añadir loader
 export default Place;

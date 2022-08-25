@@ -34,20 +34,21 @@ const places = [
   {
     id: 4,
     img: santuarioImg,
-    name: "Santuario",
-    description: "",
+    name: "Santuario ",
+    description: "Comenzando su construcción en 1985, el templo de la Virgen del Rosario constituye un símbolo de fé para los creyentes de todo el país.\nEste santuario se encuentra ubicado en un inmenso predio con zonas verdes que permiten albergar a miles de personas cada año durante las celebraciones del Día de la Virgen.",
+    // fecha en la cual la ciudad se convierte en un centro turístico
   },
   {
     id: 5,
     img: parqueSanMartinImg,
     name: "Parque San Martín",
-    description: "",
+    description: "Ubicado a lo largo de la calle Colón, entre Garibaldi y Juan B. Justo, este parque se extiende a través de cuatro manzanas llegando hasta orillas de la barraca.\nDía a día, jovenes, niños y familias se acercan al Parque San Martín para disfrutar de sus espacios verdes y vistas al Río Paraná",
   },
   {
     id: 6,
     img: plazaMitreImg,
     name: "Plaza Mitre",
-    description: "",
+    description: "Ubicada en el centro comercial de la ciudad y rodeada de edificios históricos, es conciderada la plaza principal de la ciudad desde su fundación.\nA su alrededor, pueden encontarse una amplia oferta comercial y gastronómica.",
   },
   {
     id: 7,

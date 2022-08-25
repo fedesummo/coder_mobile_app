@@ -9,7 +9,7 @@ import SectionsList from "./components/SectionsList";
 const Home = () => {
 
   return (
-    <ScreenContainer style={{ paddingLeft: 8 }}>
+    <ScreenContainer scroll style={{ paddingLeft: 8 }}>
       <Header
         heading="¡Hola, Federico!"
         subHeading="¿Que actividad vas a hacer hoy?"

@@ -5,7 +5,7 @@ import { places } from "~constants";
 const MostVisitedList = () => {
   const renderItem = ({ item }) => (
     <View style={styles.container}>
-      <PlaceItem heading={item.name} />
+      <PlaceItem data={item} />
     </View>
   );
 

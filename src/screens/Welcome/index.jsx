@@ -1,15 +1,13 @@
-import fontSizes from "~constants/fontSizes";
-import snLogo from "./assets/sn-logo.png";
-import { useState, useRef } from "react";
+import { colors, fontSizes } from "~constants";
 import { useAppContext } from "~context/App";
-import colors from "~constants/colors";
+import snLogo from "./assets/sn-logo.png";
+import { PrimaryBtn } from "~components"
+import { useState, useRef } from "react";
 import {
   View,
   StyleSheet,
-  Text,
   Image,
   TextInput,
-  Pressable,
   Alert,
 } from "react-native";
 
@@ -38,12 +36,10 @@ const Welcome = ({ navigation }) => {
   return (
     <View style={styles.screenContainer}>
       <View style={styles.contentContainer}>
-        {/* Logo */}
         <View style={styles.logoContainer}>
           <Image source={snLogo} style={styles.logo} />
         </View>
 
-        {/* Input */}
         <TextInput
           ref={inputRef}
           value={enteredUsername}
@@ -52,10 +48,7 @@ const Welcome = ({ navigation }) => {
           placeholder="Introduce tu nombre aquí..."
         />
 
-        {/* Button */}
-        <Pressable style={styles.btn} onPress={submitUsername}>
-          <Text style={styles.btnText}>Ingresar</Text>
-        </Pressable>
+        <PrimaryBtn text="Ingresar" onPress={submitUsername}/>
       </View>
     </View>
   );

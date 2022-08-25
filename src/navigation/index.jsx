@@ -8,8 +8,7 @@ const AppNavigator = () => {
   return (
     <NavigationContainer>
       <Stack.Navigator
-        // initialRouteName="Welcome"
-        initialRouteName="Discover"
+        initialRouteName="Welcome"
         screenOptions={() => ({
           headerShown: false,
         })}

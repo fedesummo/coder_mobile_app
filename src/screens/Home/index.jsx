@@ -1,53 +1,51 @@
-import { FlatList, Text, View, StyleSheet } from "react-native";
-import { useAppContext } from "~context/App";
-import Header from "~components/Header";
-import places from "~constants/places";
-import colors from "~constants/colors";
+import MostVisitedList from "./components/MostVisitedList";
+import { View, StyleSheet } from "react-native";
+import SectionHeader from "./components/SectionHeader";
+import { ScreenContainer, Header } from "~components";
+import NewsList from "./components/NewsList";
+import SectionsList from "./components/SectionsList";
+// import styles from "./styles";
 
 const Home = () => {
-  const { username } = useAppContext();
-
-  const renderItem = ({ item }) => (
-    <View style={styles.container}>
-      <Text style={styles.title}>{item.name}</Text>
-    </View>
-  );
 
   return (
-    <View style={styles.screenContainer}>
-      <FlatList
-        ListHeaderComponent={<Header title={`¡Hola, ${username}!`} />}
-        showsVerticalScrollIndicator={false}
-        data={places}
-        renderItem={renderItem}
-        keyExtractor={(item) => item.id}
-        numColumns={2}
-        columnWrapperStyle={{ justifyContent: "space-between" }}
+    <ScreenContainer scroll style={{ paddingLeft: 8 }}>
+      <Header
+        heading="¡Hola, Federico!"
+        subHeading="¿Que actividad vas a hacer hoy?"
       />
-    </View>
+
+      {/* Sections */}
+      <View style={styles.sectionContainer}>
+        <SectionHeader heading="Secciones" />
+        <SectionsList />
+        
+      </View>
+
+      {/* News */}
+      <View style={styles.sectionContainer}>
+        <SectionHeader heading="Noticias" />
+        <NewsList />
+      </View>
+
+      {/* Most Visited */}
+      <View style={styles.sectionContainer}>
+        <SectionHeader heading="Los más visitados" toScreen="Discover" />
+        <MostVisitedList />
+      </View>
+
+      {/* Events */}
+      {/* <View>
+        <SectionHeader heading="Próximos eventos"/>
+      </View> */}
+    </ScreenContainer>
   );
 };
 
 export default Home;
 
 const styles = StyleSheet.create({
-  screenContainer: {
-    marginHorizontal: 25,
-  },
-  container: {
-    backgroundColor: colors.loader,
-    width: "47%",
-    height: 220,
+  sectionContainer: {
     marginBottom: 15,
-    justifyContent: "flex-end",
-    borderRadius: 25,
-  },
-  title: {
-    width: "80%",
-    marginLeft: 15,
-    marginBottom: 8,
-    color: "white",
-    fontSize: 20,
-    fontWeight: "500",
   },
 });

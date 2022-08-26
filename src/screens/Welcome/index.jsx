@@ -11,7 +11,13 @@ import {
   Alert,
 } from "react-native";
 
+import { useSelector } from "react-redux"
+import { useEffect } from "react";
+
 const Welcome = ({ navigation }) => {
+  const store = useSelector((store) => store)
+  useEffect(() => console.log(store), [store])
+
   const [enteredUsername, setEnteredUsername] = useState("");
   const inputRef = useRef();
 

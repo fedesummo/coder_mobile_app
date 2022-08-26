@@ -1,6 +1,5 @@
 import { FlatList, StyleSheet } from "react-native";
 import { ScreenContainer, Header, PlaceItem } from "~components";
-import { useAppContext } from "~context/App";
 import places from "~constants/places";
 import colors from "~constants/colors";
 

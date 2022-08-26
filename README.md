@@ -5,7 +5,6 @@ Permitirá acceder a información acerca de los puntos de interés de la ciudad,
 ## Contexto del desarrollo  
 Esta aplicación está siendo desarrollada como proyecto de final del curso _"Desarrollo de Aplicaciones"_, dictado por Coderhouse. La consigna consiste en desarrollar una aplicación de temática a elección, en la cual se integren los conceptos vistos en clase.  
 
-
 ## Ejecución del proyecto
 Clonación del repositorio:
 ```sh

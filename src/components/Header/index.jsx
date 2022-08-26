@@ -2,6 +2,7 @@ import { Text, View, StyleSheet, Image, Pressable } from "react-native";
 import { useNavigation } from "@react-navigation/native";
 import fontSizes from "~constants/fontSizes";
 import menuIcon from "./assets/menu.png";
+import { useEffect } from "react";
 
 const Header = ({ heading, subHeading }) => {
   const navigation = useNavigation();

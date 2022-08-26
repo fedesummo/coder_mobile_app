@@ -8,13 +8,12 @@ import checkboxIcon from "../assets/checked.png";
 // import checkboxIcon from "../assets/unchecked.png";
 import padlockIcon from "../assets/padlock.png";
 
-import { useAppContext } from "~context/App";
+import { useSelector } from "react-redux";
 import { useEffect } from "react";
 
 const Reward = (props) => {
   const { name, description, requiredPoints } = props.data;
-  const { userPoints } = useAppContext();
-
+  const { points: userPoints } = useSelector(({user}) => user)
   return (
     <View style={styles.container}>
       {/* Body */}

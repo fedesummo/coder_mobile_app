@@ -1,5 +1,4 @@
 import { colors, fontSizes } from "~constants";
-import { useAppContext } from "~context/App";
 import snLogo from "./assets/sn-logo.png";
 import { PrimaryBtn } from "~components"
 import { useState, useRef } from "react";
@@ -10,18 +9,21 @@ import {
   TextInput,
   Alert,
 } from "react-native";
+import { useDispatch } from "react-redux"
+import { setUsername } from "~store/user/actions";
 
 const Welcome = ({ navigation }) => {
+  const dispatch = useDispatch()
+
   const [enteredUsername, setEnteredUsername] = useState("");
   const inputRef = useRef();
 
-  const { setUsername } = useAppContext();
 
   const onChangeText = (input) => setEnteredUsername(input);
 
   const submitUsername = () => {
     if (enteredUsername) {
-      setUsername(enteredUsername);
+      dispatch(setUsername(enteredUsername));
       navigation.navigate("Home");
     } else {
       Alert.alert(

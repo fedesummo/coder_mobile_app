@@ -1,17 +1,20 @@
 import MostVisitedList from "./components/MostVisitedList";
-import { View, StyleSheet } from "react-native";
 import SectionHeader from "./components/SectionHeader";
 import { ScreenContainer, Header } from "~components";
-import NewsList from "./components/NewsList";
 import SectionsList from "./components/SectionsList";
+import { View, StyleSheet } from "react-native";
+import NewsList from "./components/NewsList";
+import { useSelector } from "react-redux";
+import { useEffect } from "react";
 // import styles from "./styles";
 
 const Home = () => {
+  const { username } = useSelector(({ user }) => user);
 
   return (
     <ScreenContainer scroll style={{ paddingLeft: 8 }}>
       <Header
-        heading="¡Hola, Federico!"
+        heading={`¡Hola, ${username}!`}
         subHeading="¿Que actividad vas a hacer hoy?"
       />
 
@@ -19,7 +22,6 @@ const Home = () => {
       <View style={styles.sectionContainer}>
         <SectionHeader heading="Secciones" />
         <SectionsList />
-        
       </View>
 
       {/* News */}

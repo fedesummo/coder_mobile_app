@@ -1,11 +1,12 @@
-import { AppContextProvider } from "~context/App";
 import AppNavigator from "~navigation";
+import { Provider } from "react-redux";
+import store from "~store";
 
 const App = () => {
   return (
-    <AppContextProvider>
+    <Provider store={store}>
       <AppNavigator />
-    </AppContextProvider>
+    </Provider>
   );
 };
 

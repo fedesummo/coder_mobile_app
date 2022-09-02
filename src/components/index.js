@@ -5,4 +5,6 @@ export { default as Header } from "./Header";
 export { default as Points } from "./Points";
 export { default as BackBtn } from "./BackBtn";
 export { default as PrimaryBtn } from "./PrimaryBtn";
+export { default as Input } from "./Input";
+export { default as SecondaryBtn } from "./SecondaryBtn";
 // export { default as } from "./";

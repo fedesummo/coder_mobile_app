@@ -14,7 +14,8 @@ const Home = () => {
   return (
     <ScreenContainer scroll style={{ paddingLeft: 8 }}>
       <Header
-        heading={`¡Hola, ${username}!`}
+        // heading={`¡Hola, ${username}!`}
+        heading={`¡Hola, Federico!`}
         subHeading="¿Que actividad vas a hacer hoy?"
       />
 

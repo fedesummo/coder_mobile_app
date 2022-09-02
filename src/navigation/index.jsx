@@ -1,25 +1,54 @@
-import { Welcome, Home, Menu, Discover, Place, Rewards } from "~screens/index";
-import { createNativeStackNavigator } from "@react-navigation/native-stack";
+import { SignIn, SignUp, Home, Discover, Place, Rewards } from "~screens/index";
+import { createDrawerNavigator } from "@react-navigation/drawer";
 import { NavigationContainer } from "@react-navigation/native";
+import { useMemo } from "react";
 
-const Stack = createNativeStackNavigator();
+const Drawer = createDrawerNavigator();
 
 const AppNavigator = () => {
+  const hideOnDrawer = useMemo(
+    () => ({
+      drawerItemStyle: {
+        display: "none",
+      },
+    }),
+    []
+  );
+
   return (
     <NavigationContainer>
-      <Stack.Navigator
-        initialRouteName="Welcome"
-        screenOptions={() => ({
-          headerShown: false,
-        })}
+      <Drawer.Navigator
+        initialRouteName="SignIn"
+        screenOptions={{ headerShown: false }}
       >
-        <Stack.Screen name="Welcome" component={Welcome} />
-        <Stack.Screen name="Home" component={Home} />
-        <Stack.Screen name="Menu" component={Menu} />
-        <Stack.Screen name="Discover" component={Discover} />
-        <Stack.Screen name="Place" component={Place} />
-        <Stack.Screen name="Rewards" component={Rewards} />
-      </Stack.Navigator>
+        <Drawer.Screen
+          name="SignIn"
+          component={SignIn}
+          options={hideOnDrawer}
+        />
+        <Drawer.Screen
+          name="SignUp"
+          component={SignUp}
+          options={hideOnDrawer}
+        />
+        <Drawer.Screen
+          name="Home"
+          component={Home}
+          options={{ title: "Inicio" }}
+        />
+        <Drawer.Screen
+          name="Discover"
+          component={Discover}
+          options={{ title: "Descubrí" }}
+        />
+        <Drawer.Screen name="Place" component={Place} options={hideOnDrawer} />
+
+        <Drawer.Screen
+          name="Rewards"
+          component={Rewards}
+          options={{ title: "Beneficios" }}
+        />
+      </Drawer.Navigator>
     </NavigationContainer>
   );
 };

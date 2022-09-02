@@ -1,5 +1,5 @@
-import { useNavigation } from "@react-navigation/native";
 import { StyleSheet, Pressable, Image } from "react-native";
+import { useNavigation } from "@react-navigation/native";
 import backArrowIcon from "./assets/back-arrow.png";
 
 const BackBtn = () => {

@@ -1,15 +1,14 @@
 const initialState = {
-  idToken: "",
+  refreshToken: "",
+  // localId: "",
   email: "",
   displayName: "",
   photoUrl: "",
 };
 
 const auth = (state = initialState, action) => {
+  const { email, refreshToken, displayName, photoUrl } = action;
   switch (action.type) {
-    case "SIGN_UP":
-      return "";
-    // return { ...state,  };
     case "SIGN_IN":
       return {
         ...state,
@@ -17,6 +16,8 @@ const auth = (state = initialState, action) => {
         email: action.email,
         displayName: action.displayName,
       };
+    case "SIGN_OUT":
+      return initialState;
     default:
       return state;
   }

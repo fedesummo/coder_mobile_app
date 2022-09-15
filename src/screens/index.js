@@ -6,3 +6,4 @@ export { default as Discover } from "./Discover";
 export { default as Place } from "./Place";
 export { default as Rewards } from "./Rewards";
 export { default as Scanner } from "./Scanner";
+export { default as SignOut } from "./SignOut";

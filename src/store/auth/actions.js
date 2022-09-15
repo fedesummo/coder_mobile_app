@@ -69,14 +69,36 @@ export const signUp =
 export const signIn =
   ({ email, password }) =>
   async (dispatch) => {
+    if (!email && !password) {
+      Alert.alert(
+        "¡Surgió un error!",
+        "No te olvides de introducir un correo electrónico y una contraseña",
+        [{ text: "Volver" }]
+      );
+      return null;
+    }
+    if (!email) {
+      Alert.alert(
+        "¡Surgió un error!",
+        "No te olvides de introducir un correo electrónico",
+        [{ text: "Volver" }]
+      );
+      return null;
+    }
+    if (!password) {
+      Alert.alert(
+        "¡Surgió un error!",
+        "No te olvides de introducir una contraseña",
+        [{ text: "Volver" }]
+      );
+      return null;
+    }
     try {
       const { data } = await axiosSignIn.post("", { email, password });
-      console.log(data);
+      const { idToken, displayName } = data;
       dispatch({
         type: "SIGN_IN",
-        idToken: data.idToken,
-        email: data.email,
-        displayName: data.displayName,
+        payload: { idToken, email, displayName },
       });
     } catch (error) {
       const { message } = error.response.data.error;
@@ -100,7 +122,15 @@ export const signIn =
     }
   };
 
+export const signOut = () => (dispatch) => {
+  dispatch({
+    type: "SIGN_OUT",
+    payload: null,
+  });
+};
+
 // export const getUserData = () => async (dispatch) => {
+//   const
 //   try {
 //     const { data } = await axiosGetUserData.post("", {
 //       idToken: "IjYonIID4Lf65WjOaqH2kauUlim2",

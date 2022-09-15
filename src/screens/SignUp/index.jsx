@@ -27,7 +27,7 @@ const SignUp = () => {
       <View style={styles.backBtn}>
         <BackBtn />
       </View>
-      <View style={styles.form}>
+      <View>
         <Input
           placeholder="Introduce aquí tu email..."
           value={email}
@@ -39,10 +39,10 @@ const SignUp = () => {
           placeholder="Introduce aquí tu contraseña..."
           value={password}
           onChangeText={handlePasswordChange}
+          style={styles.formGap}
         />
+        <PrimaryBtn text="Registrarse" onPress={submitForm} />
       </View>
-
-      <PrimaryBtn text="Registrarse" onPress={submitForm} />
     </ScreenContainer>
   );
 };

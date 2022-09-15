@@ -6,6 +6,7 @@ import {
   Place,
   Scanner,
   Rewards,
+  SignOut,
 } from "~screens/index";
 import { createDrawerNavigator } from "@react-navigation/drawer";
 import { NavigationContainer } from "@react-navigation/native";
@@ -59,6 +60,11 @@ const AppNavigator = () => {
           name="Rewards"
           component={Rewards}
           options={{ title: "Beneficios" }}
+        />
+        <Drawer.Screen
+          name="SignOut"
+          component={SignOut}
+          options={{ title: "Cerrar sesión" }}
         />
       </Drawer.Navigator>
     </NavigationContainer>

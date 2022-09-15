@@ -12,8 +12,8 @@ const styles = StyleSheet.create({
     top: 40,
     left: 25,
   },
-  inputsGap: {
-    marginVertical: 25,
+  formGap: {
+    marginVertical: 15,
   },
   btn: {},
   form: {

@@ -1,14 +1,12 @@
-import { useEffect, useState } from "react";
-import { View, Text, StyleSheet } from "react-native";
 import { ScreenContainer, BackBtn, Input, PrimaryBtn } from "~components";
 import { signUp } from "~store/auth/actions";
 import { useDispatch } from "react-redux";
+import { View } from "react-native";
+import { useState } from "react";
+import styles from "./styles";
 
 const SignUp = () => {
   const dispatch = useDispatch();
-
-  // const [name, setName] = useState("");
-  // const handleNameChange = (input) => setName(input);
 
   const [email, setEmail] = useState("");
   const handleEmailChange = (input) => setEmail(input);
@@ -19,8 +17,8 @@ const SignUp = () => {
   const submitForm = () =>
     dispatch(
       signUp({
-        email: email,
-        password: password,
+        email,
+        password,
       })
     );
 
@@ -29,12 +27,7 @@ const SignUp = () => {
       <View style={styles.backBtn}>
         <BackBtn />
       </View>
-      <View style={styles.form}>
-        {/* <Input
-          placeholder="Nombre"
-          value={name}
-          onChangeText={handleNameChange}
-        /> */}
+      <View>
         <Input
           placeholder="Introduce aquí tu email..."
           value={email}
@@ -46,33 +39,12 @@ const SignUp = () => {
           placeholder="Introduce aquí tu contraseña..."
           value={password}
           onChangeText={handlePasswordChange}
+          style={styles.formGap}
         />
+        <PrimaryBtn text="Registrarse" onPress={submitForm} />
       </View>
-
-      <PrimaryBtn text="Registrarse" onPress={submitForm} />
     </ScreenContainer>
   );
 };
 
 export default SignUp;
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    position: "relative",
-    justifyContent: "center",
-    paddingHorizontal: "13%",
-  },
-  backBtn: {
-    position: "absolute",
-    top: 40,
-    left: 25,
-  },
-  inputsGap: {
-    marginVertical: 25,
-  },
-  btn: {},
-  form: {
-    marginVertical: 60,
-  },
-});

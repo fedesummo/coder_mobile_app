@@ -6,8 +6,11 @@ import { colors, fontSizes } from "~constants";
 import { signIn } from "~store/auth/actions";
 import snLogo from "./assets/sn-logo.png";
 import { useState } from "react";
+import { useEffect } from "react";
 
 const SignIn = () => {
+  const authEmail = useSelector(({ auth }) => auth.email);
+
   const dispatch = useDispatch();
   const navigation = useNavigation();
 
@@ -20,6 +23,18 @@ const SignIn = () => {
   const submitForm = () => {
     dispatch(signIn({ email, password }));
   };
+
+  const resetForm = () => {
+    setEmail("");
+    setPassword("");
+  };
+
+  useEffect(() => {
+    if (authEmail) {
+      resetForm();
+      navigation.navigate("Home");
+    }
+  }, [authEmail]);
 
   return (
     <View style={styles.screenContainer}>
@@ -40,14 +55,16 @@ const SignIn = () => {
             placeholder="Introduce aquí tu contraseña..."
             value={password}
             onChangeText={handlePasswordChange}
+            style={styles.formGap}
+          />
+
+          <PrimaryBtn text="Ingresar" onPress={submitForm} />
+          <SecondaryBtn
+            text="¿No tienes una cuenta?"
+            onPress={() => navigation.navigate("SignUp")}
+            style={styles.signUpBtn}
           />
         </View>
-
-        <PrimaryBtn text="Ingresar" onPress={submitForm} />
-        <SecondaryBtn
-          text="¿No tienes una cuenta?"
-          onPress={() => navigation.navigate("SignUp")}
-        />
       </View>
     </View>
   );
@@ -63,6 +80,13 @@ const styles = StyleSheet.create({
   },
   logoContainer: {
     width: "80%",
+  },
+  formGap: {
+    marginVertical: 15,
+  },
+  signUpBtn: {
+    marginTop: 8,
+    textAlign: "center"
   },
   logo: {
     width: "100%",

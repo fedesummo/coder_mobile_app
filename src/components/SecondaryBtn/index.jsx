@@ -1,9 +1,9 @@
 import { Pressable, Text, StyleSheet } from "react-native";
 
-const SecondaryBtn = ({ text, onPress }) => {
+const SecondaryBtn = ({ text, ...otherProps }) => {
   return (
-    <Pressable onPress={onPress}>
-      <Text>{text}</Text>
+    <Pressable {...otherProps}>
+      <Text style={styles.text}>{text}</Text>
     </Pressable>
   );
 };
@@ -11,5 +11,7 @@ const SecondaryBtn = ({ text, onPress }) => {
 export default SecondaryBtn;
 
 const styles = StyleSheet.create({
-    
+  text: {
+    textAlign: "center",
+  },
 });

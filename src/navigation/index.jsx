@@ -1,4 +1,13 @@
-import { SignIn, SignUp, Home, Discover, Place, Rewards } from "~screens/index";
+import {
+  SignIn,
+  SignUp,
+  Home,
+  Discover,
+  Place,
+  Scanner,
+  Rewards,
+  SignOut,
+} from "~screens/index";
 import { createDrawerNavigator } from "@react-navigation/drawer";
 import { NavigationContainer } from "@react-navigation/native";
 import { useMemo } from "react";
@@ -42,11 +51,20 @@ const AppNavigator = () => {
           options={{ title: "Descubrí" }}
         />
         <Drawer.Screen name="Place" component={Place} options={hideOnDrawer} />
-
+        <Drawer.Screen
+          name="Scanner"
+          component={Scanner}
+          options={{ title: "QR Escáner" }}
+        />
         <Drawer.Screen
           name="Rewards"
           component={Rewards}
           options={{ title: "Beneficios" }}
+        />
+        <Drawer.Screen
+          name="SignOut"
+          component={SignOut}
+          options={{ title: "Cerrar sesión" }}
         />
       </Drawer.Navigator>
     </NavigationContainer>

@@ -1,10 +1,6 @@
 const initialState = {
-  // refreshToken: "",
-  // localId: "",
-  idToken: "",
-  email: "",
-  displayName: "",
-  photoUrl: "",
+  user_id: "",
+  displayName: ""
 };
 
 const auth = (state = initialState, action) => {

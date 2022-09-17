@@ -9,13 +9,12 @@ import { useEffect } from "react";
 // import styles from "./styles";
 
 const Home = () => {
-  const { username } = useSelector(({ user }) => user);
+  const { displayName } = useSelector(({ auth }) => auth.displayName);
 
   return (
     <ScreenContainer scroll style={{ paddingLeft: 8 }}>
       <Header
-        // heading={`¡Hola, ${username}!`}
-        heading={`¡Hola, Federico!`}
+        heading={displayName ? `¡Hola, ${displayName}!` : "¡Bienvenido!"}
         subHeading="¿Que actividad vas a hacer hoy?"
       />
 

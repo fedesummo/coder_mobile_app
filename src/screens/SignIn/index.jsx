@@ -9,15 +9,15 @@ import { useState } from "react";
 import { useEffect } from "react";
 
 const SignIn = () => {
-  const authEmail = useSelector(({ auth }) => auth.email);
+  const user_id = useSelector(({ auth }) => auth.user_id);
 
   const dispatch = useDispatch();
   const navigation = useNavigation();
 
-  const [email, setEmail] = useState("");
+  const [email, setEmail] = useState("fede@mail.com");
   const handleEmailChange = (input) => setEmail(input);
 
-  const [password, setPassword] = useState("");
+  const [password, setPassword] = useState("123456");
   const handlePasswordChange = (input) => setPassword(input);
 
   const submitForm = () => {
@@ -30,11 +30,11 @@ const SignIn = () => {
   };
 
   useEffect(() => {
-    if (authEmail) {
+    if (user_id) {
       resetForm();
       navigation.navigate("Home");
     }
-  }, [authEmail]);
+  }, [user_id]);
 
   return (
     <View style={styles.screenContainer}>
@@ -86,7 +86,7 @@ const styles = StyleSheet.create({
   },
   signUpBtn: {
     marginTop: 8,
-    textAlign: "center"
+    textAlign: "center",
   },
   logo: {
     width: "100%",

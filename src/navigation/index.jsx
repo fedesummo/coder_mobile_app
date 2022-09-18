@@ -1,3 +1,6 @@
+import { createDrawerNavigator } from "@react-navigation/drawer";
+import { NavigationContainer } from "@react-navigation/native";
+import { useMemo } from "react";
 import {
   SignIn,
   SignUp,
@@ -8,9 +11,6 @@ import {
   Rewards,
   SignOut,
 } from "~screens/index";
-import { createDrawerNavigator } from "@react-navigation/drawer";
-import { NavigationContainer } from "@react-navigation/native";
-import { useMemo } from "react";
 
 const Drawer = createDrawerNavigator();
 

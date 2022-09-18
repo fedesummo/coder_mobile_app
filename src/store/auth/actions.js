@@ -1,4 +1,8 @@
-import { axiosSignUp, axiosSignIn } from "~api";
+import { axiosSignUp, axiosSignIn, axiosIdToken } from "~api";
+import {
+  saveRefreshTokenOnAuthDb,
+  getLastRefreshTokenFromAuthDb,
+} from "~db/auth";
 import { Alert } from "react-native";
 
 export const signUp =
@@ -94,11 +98,16 @@ export const signIn =
       return null;
     }
     try {
-      const { data } = await axiosSignIn.post("", { email, password });
-      const { idToken, displayName } = data;
+      const { data } = await axiosSignIn.post("", {
+        email,
+        password,
+        returnSecureToken: true,
+      });
+      const { refreshToken, localId } = data;
+      await saveRefreshTokenOnAuthDb(refreshToken);
       dispatch({
         type: "SIGN_IN",
-        payload: { idToken, email, displayName },
+        payload: { user_id: localId },
       });
     } catch (error) {
       const { message } = error.response.data.error;
@@ -127,6 +136,25 @@ export const signOut = () => (dispatch) => {
     type: "SIGN_OUT",
     payload: null,
   });
+};
+
+export const validateLocalResfreshToken = () => async (dispatch) => {
+  try {
+    const queryResult = await getLastRefreshTokenFromAuthDb();
+    const { refreshToken } = queryResult.rows._array[0];
+    const res = await axiosIdToken.post("", {
+      grant_type: "refresh_token",
+      refresh_token: refreshToken,
+    });
+    console.log(res.data)
+    const { user_id } = res.data;
+    dispatch({
+      type: "SIGN_IN",
+      payload: { user_id },
+    });
+  } catch (error) {
+    console.log("error", error.response);
+  }
 };
 
 // export const getUserData = () => async (dispatch) => {

@@ -7,4 +7,5 @@ export { default as BackBtn } from "./BackBtn";
 export { default as PrimaryBtn } from "./PrimaryBtn";
 export { default as Input } from "./Input";
 export { default as SecondaryBtn } from "./SecondaryBtn";
+export { default as SessionHandler } from "./SessionHandler";
 // export { default as } from "./";

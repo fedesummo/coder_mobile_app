@@ -10,6 +10,7 @@ import {
   Scanner,
   Rewards,
   SignOut,
+  Map,
 } from "~screens/index";
 
 const Drawer = createDrawerNavigator();
@@ -56,6 +57,7 @@ const AppNavigator = () => {
           component={Scanner}
           options={{ title: "QR Escáner" }}
         />
+        <Drawer.Screen name="Map" component={Map} options={{ title: "Mapa" }} />
         <Drawer.Screen
           name="Rewards"
           component={Rewards}

@@ -28,7 +28,8 @@ const AppNavigator = () => {
   return (
     <NavigationContainer>
       <Drawer.Navigator
-        initialRouteName="SignIn"
+        // initialRouteName="SignIn"
+        initialRouteName="Home"
         screenOptions={{ headerShown: false }}
       >
         <Drawer.Screen

@@ -1,42 +1,43 @@
 import { StyleSheet } from "react-native";
-import { colors } from "~constants";
+import { commonStyles } from "~styles";
 
 const styles = StyleSheet.create({
-  screenContainer: {
+  screenCnt: {
     flex: 1,
     position: "relative",
+    backgroundColor: "black",
   },
-  imgContainer: {
-    height: "65%",
-    position: "relative",
-    backgroundColor: colors.loader,
+  bgImg: {
+    opacity: 0.5,
   },
-  bodyContainer: {
+  backBtn: { ...commonStyles.backBtn },
+  bodyCnt: {
+    width: "100%",
     position: "absolute",
     bottom: 0,
-    width: "100%",
-    height: "45%",
-    borderTopLeftRadius: 30,
-    borderTopRightRadius: 30,
-    paddingVertical: 15,
-    paddingHorizontal: 25,
-    backgroundColor: colors.background,
+    paddingHorizontal: 15,
+    paddingBottom: 15,
   },
-  backBtn: {
-    position: "absolute",
-    top: 40,
-    right: 25,
-    // left: 25,
+  bodyGap: {
+    marginVertical: 20,
   },
   heading: {
-    fontSize: 30,
+    color: "white",
+    fontSize: 40,
     fontWeight: "600",
   },
-  gralText: {
-    fontSize: 16,
+  ubicationCnt: {
+    flexDirection: "row",
+    alignItems: "center",
   },
-  bodyBtn: {
-    marginTop: 15,
+  ubicationTxt: {
+    marginLeft: 8,
+    color: "white",
+    fontWeight: "500",
+  },
+  description: {
+    color: "white",
+    fontSize: 17,
   },
 });
 

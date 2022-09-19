@@ -1,12 +1,15 @@
-import { View, ImageBackground, ScrollView, Text } from "react-native";
+import { View, ImageBackground, Text } from "react-native";
 import { useEffect, useCallback, useState } from "react";
+import { useNavigation } from "@react-navigation/native";
 import { useRoute } from "@react-navigation/native";
 import { BackBtn, PrimaryBtn } from "~components";
+import { FontAwesome } from "@expo/vector-icons";
 import { places } from "~constants";
 import styles from "./styles";
 
 const Place = () => {
   const { params } = useRoute();
+  const navigation = useNavigation();
 
   const [placeData, setPlaceData] = useState(null);
 
@@ -19,32 +22,35 @@ const Place = () => {
   );
 
   useEffect(() => getPlaceById(params.id), [params]);
-  // useEffect(() => console.log(placeData), [placeData]);
 
   return placeData ? (
-    <View style={styles.screenContainer}>
-      <ImageBackground
-        style={styles.imgContainer}
-        imageStyle={{ height: "100%" }}
-        source={placeData.img}
-        resizeMode="cover"
-      >
-        <View style={styles.backBtn}>
-          <BackBtn />
-        </View>
-      </ImageBackground>
-      <ScrollView style={styles.bodyContainer}>
+    <ImageBackground
+      style={styles.screenCnt}
+      imageStyle={styles.bgImg}
+      source={placeData.img}
+      resizeMode="cover"
+    >
+      <View style={styles.backBtn}>
+        <BackBtn />
+      </View>
+
+      <View style={styles.bodyCnt}>
         <Text style={styles.heading}>{placeData.name}</Text>
-        <Text style={styles.gralText}>{placeData.description}</Text>
-        <View style={styles.bodyBtn}>
-          <PrimaryBtn text="Marcar como visitado" />
+        <View style={styles.ubicationCnt}>
+          <FontAwesome name="map-marker" size={16} color="white" />
+          <Text style={styles.ubicationTxt}>{placeData.ubication}</Text>
         </View>
-      </ScrollView>
-    </View>
-  ) : (
-    <></>
-  );
+        <Text style={{ ...styles.description, ...styles.bodyGap }}>
+          {placeData.description}
+        </Text>
+        <PrimaryBtn
+          transparent
+          text="Ver en el mapa"
+          onPress={() => navigation.navigate("Map")}
+        />
+      </View>
+    </ImageBackground>
+  ) : null;
 };
 
-// añadir loader
 export default Place;

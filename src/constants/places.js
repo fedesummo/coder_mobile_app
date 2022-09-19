@@ -78,6 +78,7 @@ const places = [
     name: "Autódromo",
     description:
       "Fue inaugurado en 2019 dentro de un predio ferial de 90 hectáreas ubicado en el km 255 de la Autopista que une Buenos Aires con Rosario.\nEn su interior se realizan cada año eventos deportivos y empresariales, exposiciones a cielo abierto y convenciones.\nEl trazado de la pista permite recibir a todas las categorías automovilísitcas nacionales e internacionales",
+    ubication: "Autopista Bs.As. - Rosario, Km 225",
     coordinates: {
       latitude: -33.40000058363997,
       longitude: -60.201606746080046,

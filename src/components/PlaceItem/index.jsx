@@ -9,9 +9,13 @@ const PlaceItem = ({ data, style }) => {
   return (
     <Pressable
       style={{ ...styles.container, ...style }}
-      onPress={() => navigation.push("Place", { id })}
+      onPress={() => navigation.navigate("Place", { id })}
     >
-      <ImageBackground style={styles.imgContainer} imageStyle={styles.img} source={data.img}>
+      <ImageBackground
+        style={styles.imgContainer}
+        imageStyle={styles.img}
+        source={data.img}
+      >
         {data.name && <Text style={styles.heading}>{data.name}</Text>}
       </ImageBackground>
     </Pressable>

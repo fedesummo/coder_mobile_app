@@ -1,23 +1,19 @@
 import { StyleSheet } from "react-native";
 
 const styles = StyleSheet.create({
-  container: {
-    height: 220,
-  },
-  imgContainer: {
-    width: "100%",
-    height: "100%",
+  imgCnt: {
+    flex: 1,
+    overflow: "hidden",
     justifyContent: "flex-end",
-  },
-  img: {
     borderRadius: 20,
+    elevation: 8,
   },
   heading: {
-    width: "80%",
     color: "white",
-    marginLeft: 15,
-    marginBottom: 8,
-    fontSize: 20,
+    backgroundColor: "rgba(0, 0, 0, 0.5)",
+    paddingVertical: 4,
+    textAlign: "center",
+    fontSize: 21,
     fontWeight: "500",
   },
 });

@@ -4,11 +4,10 @@ import { useMemo } from "react";
 import {
   SignIn,
   SignUp,
-  Home,
+  // Home,
   Discover,
   Place,
   Scanner,
-  Rewards,
   SignOut,
   Map,
 } from "~screens/index";
@@ -29,7 +28,7 @@ const AppNavigator = () => {
     <NavigationContainer>
       <Drawer.Navigator
         // initialRouteName="SignIn"
-        initialRouteName="Home"
+        initialRouteName="Discover"
         screenOptions={{ headerShown: false }}
       >
         <Drawer.Screen
@@ -42,11 +41,11 @@ const AppNavigator = () => {
           component={SignUp}
           options={hideOnDrawer}
         />
-        <Drawer.Screen
+        {/* <Drawer.Screen
           name="Home"
           component={Home}
           options={{ title: "Inicio" }}
-        />
+        /> */}
         <Drawer.Screen
           name="Discover"
           component={Discover}
@@ -59,11 +58,6 @@ const AppNavigator = () => {
           options={{ title: "QR Escáner" }}
         />
         <Drawer.Screen name="Map" component={Map} options={{ title: "Mapa" }} />
-        <Drawer.Screen
-          name="Rewards"
-          component={Rewards}
-          options={{ title: "Beneficios" }}
-        />
         <Drawer.Screen
           name="SignOut"
           component={SignOut}

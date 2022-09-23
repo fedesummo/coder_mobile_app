@@ -6,16 +6,26 @@ import plazaMitreImg from "~assets/places/plaza-mitre.jpg";
 import santuarioImg from "~assets/places/santuario.png";
 import cementerioImg from "~assets/places/cementerio.jpg";
 import estacionDescubriImg from "~assets/places/estacion-descubri.jpeg";
-import skateparkImg from "~assets/places/skatepark.jpg"
-import casaDelAcuerdoImg from "~assets/places/casa-del-acuerdo.jpg"
+import skateparkImg from "~assets/places/skatepark.jpg";
+import casaDelAcuerdoImg from "~assets/places/casa-del-acuerdo.jpg";
 import arenalImg from "~assets/places/arenal.png";
+import casaBodagoImg from "~assets/places/casa-bogado.jpg";
+import teatroImg from "~assets/places/teatro.png";
+import elCafe from "~assets/places/el-cafe.jpg";
+import hotelColonial from "~assets/places/hotel-colonial.png";
+import hotelPlaza from "~assets/places/hotel-plaza.jpg";
+import laMira from "~assets/places/la-mira.jpg";
+import baku from "~assets/places/baku.png";
+import elSanMartin from "~assets/places/el-san-martin.jpeg";
+import cervezia from "~assets/places/cervezia.jpg";
 
 const places = [
   {
     id: 0,
     img: ecoparqueImg,
     name: "Eco Parque",
-    description: "Inaugurado en 2020, este espacio verde permite a los nicoleños encontrarse con la fauna y flora autóctona, a unos pocos metros de la ciudad.\nCuenta con pasarelas y miradores para que los visitantes puedan adentrarse en los entornos delimitados.",
+    description:
+      "Inaugurado en 2020, este espacio verde permite a los nicoleños encontrarse con la fauna y flora autóctona, a unos pocos metros de la ciudad.\nCuenta con pasarelas y miradores para que los visitantes puedan adentrarse en los entornos delimitados.",
     ubication: "Paseo costanero y Av. Luis Viale",
     coordinates: {
       latitude: -33.313974821273874,
@@ -93,7 +103,8 @@ const places = [
     id: 8,
     img: estacionDescubriImg,
     name: "Estación Descubrí",
-    description: "Esta estación funciona como punto de atención al público tanto para turistias como para locales.\nEn otros servicios, es posible alquilar bicicletas para recorrer el Eco Parque y el Paseo Costanero, o alquilar kayaks y tablas SUP para disfrutar en la laguna que se encuentra a pocos metros.",
+    description:
+      "Esta estación funciona como punto de atención al público tanto para turistias como para locales.\nEn otros servicios, es posible alquilar bicicletas para recorrer el Eco Parque y el Paseo Costanero, o alquilar kayaks y tablas SUP para disfrutar en la laguna que se encuentra a pocos metros.",
     ubication: "",
     coordinates: {
       latitude: null,
@@ -104,7 +115,8 @@ const places = [
     id: 9,
     img: skateparkImg,
     name: "Skatepark",
-    description: "Desde su inauguración en 2014, esta pista se consagra como la más grande y completa del país. Es apta tanto para skate como para BMX y rollers.\nSu extensión de 2800 m2 y su variedad de obstáculos posibilitan la realización de competencias tanto a nivel amateur como profesional.",
+    description:
+      "Desde su inauguración en 2014, esta pista se consagra como la más grande y completa del país. Es apta tanto para skate como para BMX y rollers.\nSu extensión de 2800 m2 y su variedad de obstáculos posibilitan la realización de competencias tanto a nivel amateur como profesional.",
     ubication: "",
     coordinates: {
       latitude: null,
@@ -115,7 +127,8 @@ const places = [
     id: 10,
     img: casaDelAcuerdoImg,
     name: "Casa del Acuerdo",
-    description: "Este monumento nacional alberga la memoria de la reunión que en 1852 celebraron los gobernadores de las diferentas provincias, en la cual firmaron el histórico acuerdo que precedió a la Constitución Nacional.\nAdemás de funcionar como museo, el complejo cuenta con una biblioteca especializada en historia argentina compuesta por mas 60 mil tomos.",
+    description:
+      "Este monumento nacional alberga la memoria de la reunión que en 1852 celebraron los gobernadores de las diferentas provincias, en la cual firmaron el histórico acuerdo que precedió a la Constitución Nacional.\nAdemás de funcionar como museo, el complejo cuenta con una biblioteca especializada en historia argentina compuesta por mas 60 mil tomos.",
     ubication: "",
     coordinates: {
       latitude: null,
@@ -124,9 +137,10 @@ const places = [
   },
   {
     id: 11,
-    img: null,
+    img: teatroImg,
     name: "Teatro",
-    description: "El Teatro Municipal Rafel de Aguiar, ícono de la cultura y el arte local, fue inaugurado en el año 1908 y es reconocido como uno de los mejores teatros líricos del país.\nSu sala principal cuenta con capacidad para mas de 700 personas, las cuales pueden ser ubicadas a lo largo de los 3 pisos con cuales cuenta la instalación.",
+    description:
+      "El Teatro Municipal Rafel de Aguiar, ícono de la cultura y el arte local, fue inaugurado en el año 1908 y es reconocido como uno de los mejores teatros líricos del país.\nSu sala principal cuenta con capacidad para mas de 700 personas, las cuales pueden ser ubicadas a lo largo de los 3 pisos con cuales cuenta la instalación.",
     ubication: "",
     coordinates: {
       latitude: null,
@@ -137,7 +151,8 @@ const places = [
     id: 12,
     img: arenalImg,
     name: "Arenal",
-    description: "Habilitado en 2022 durante la temporada de verano, esta playa cuenta con todas las comodidades necesarias para compartir tardes con amigos y familia.\nDurante los horarios designados los guardavidas custodian a los visitantes, que también pueden disfrutar de juegos para niños, alquiler de sombrillas, baños, y venta de alimentos.",
+    description:
+      "Habilitado en 2022 durante la temporada de verano, esta playa cuenta con todas las comodidades necesarias para compartir tardes con amigos y familia.\nDurante los horarios designados los guardavidas custodian a los visitantes, que también pueden disfrutar de juegos para niños, alquiler de sombrillas, baños, y venta de alimentos.",
     ubication: "",
     coordinates: {
       latitude: null,
@@ -146,15 +161,93 @@ const places = [
   },
   {
     id: 13,
-    img: null,
+    img: casaBodagoImg,
     name: "Casa de Bogado",
-    description: "Construida en el año 1820, la casa en la cual falleció Félix Bogado es el monumento arquitectónico más antiguo de la ciudad.\nEl Coronel José Felix Bogado se desempeño como Comandante Militar de la ciudad y acompañó al General don José de San Martín en su campaña Libertadora.",
+    description:
+      "Construida en el año 1820, la casa en la cual falleció Félix Bogado es el monumento arquitectónico más antiguo de la ciudad.\nEl Coronel José Felix Bogado se desempeño como Comandante Militar de la ciudad y acompañó al General don José de San Martín en su campaña Libertadora.",
     ubication: "",
     coordinates: {
       latitude: null,
       longitude: null,
     },
-  }
+  },
+  {
+    id: 14,
+    img: elCafe,
+    name: "El café",
+    description: "",
+    ubication: "",
+    coordinates: {
+      latitude: null,
+      longitude: null,
+    },
+  },
+  {
+    id: 15,
+    img: hotelColonial,
+    name: "Hotel Colonial",
+    description: "",
+    ubication: "",
+    coordinates: {
+      latitude: null,
+      longitude: null,
+    },
+  },
+  {
+    id: 16,
+    img: hotelPlaza,
+    name: "Hotel Plaza",
+    description: "",
+    ubication: "",
+    coordinates: {
+      latitude: null,
+      longitude: null,
+    },
+  },
+  {
+    id: 17,
+    img: laMira,
+    name: "La Mira",
+    description: "La mira",
+    ubication: "",
+    coordinates: {
+      latitude: null,
+      longitude: null,
+    },
+  },
+  {
+    id: 18,
+    img: baku,
+    name: "Baku",
+    description: "",
+    ubication: "",
+    coordinates: {
+      latitude: null,
+      longitude: null,
+    },
+  },
+  {
+    id: 19,
+    img: elSanMartin,
+    name: "El San Martín",
+    description: "",
+    ubication: "",
+    coordinates: {
+      latitude: null,
+      longitude: null,
+    },
+  },
+  {
+    id: 20,
+    img: cervezia,
+    name: "Cervezia",
+    description: "",
+    ubication: "",
+    coordinates: {
+      latitude: null,
+      longitude: null,
+    },
+  },
   // {
   //   id: 0,
   //   img: null,
@@ -165,7 +258,7 @@ const places = [
   //     latitude: null,
   //     longitude: null,
   //   },
-  // }
+  // },
 ];
 
 export default places;

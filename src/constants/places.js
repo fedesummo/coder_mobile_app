@@ -4,30 +4,36 @@ import estadioImg from "~assets/places/estadio.jpg";
 import parqueSanMartinImg from "~assets/places/parque-san-martin.jpg";
 import plazaMitreImg from "~assets/places/plaza-mitre.jpg";
 import santuarioImg from "~assets/places/santuario.png";
+import cementerioImg from "~assets/places/cementerio.jpg";
+import estacionDescubriImg from "~assets/places/estacion-descubri.jpeg";
+import skateparkImg from "~assets/places/skatepark.jpg"
+import casaDelAcuerdoImg from "~assets/places/casa-del-acuerdo.jpg"
+import arenalImg from "~assets/places/arenal.png";
 
 const places = [
   {
     id: 0,
     img: ecoparqueImg,
-    name: "Ecoparque",
-    description: "",
+    name: "Eco Parque",
+    description: "Inaugurado en 2020, este espacio verde permite a los nicoleños encontrarse con la fauna y flora autóctona, a unos pocos metros de la ciudad.\nCuenta con pasarelas y miradores para que los visitantes puedan adentrarse en los entornos delimitados.",
+    ubication: "Paseo costanero y Av. Luis Viale",
     coordinates: {
       latitude: -33.313974821273874,
       longitude: -60.22447835464204,
     },
   },
-  //   {
-  //     id: 1,
-  //     img: null,
-  //     name: "Teatro Municipal",
-  //     description: "",
-  //   },
-  //   {
-  //     id: 2,
-  //     img: null,
-  //     name: "Iglésia Catedral",
-  //     description: "",
-  //   },
+  {
+    id: 2,
+    img: cementerioImg,
+    name: "Cementerio",
+    description:
+      "Fue habilitado en 1835 luego de que el gobernador Juan Manuel de Rosas visitara nuestra ciudad y declarara que el entierro de cuerpos en los laterales de la Iglesia Catedral representaba una amenaza para la sanidad de la población y el progreso de la ciudad.\nEn 2001 el Cementerio Municipal fue declarado museo a cielo abierto, debido al valor histórico que se conserva entre sus panteones y mausoleos.",
+    ubication: "Francia 550",
+    coordinates: {
+      latitude: -33.319981986305116,
+      longitude: -60.230023546054774,
+    },
+  },
   {
     id: 3,
     img: estadioImg,
@@ -41,10 +47,9 @@ const places = [
   {
     id: 4,
     img: santuarioImg,
-    name: "Santuario ",
+    name: "Santuario",
     description:
-      "Comenzando su construcción en 1985, el templo de la Virgen del Rosario constituye un símbolo de fé para los creyentes de todo el país.\nEste santuario se encuentra ubicado en un inmenso predio con zonas verdes que permiten albergar a miles de personas cada año durante las celebraciones del Día de la Virgen.",
-    // fecha en la cual la ciudad se convierte en un centro turístico
+      "La construcción del Santuario de Nuestra Señora del Rosario comenzó en 1985, dos años después de las apariciones de la virgen en la ciudad, aprobadas por el vaticano.\nActualmente la obra se encuentra completada en un 70%, con capacidad para albergar hasta 9 mil personas de pie dentro del templo.",
     coordinates: {
       latitude: -33.32262128804017,
       longitude: -60.22414724608146,
@@ -84,6 +89,83 @@ const places = [
       longitude: -60.201606746080046,
     },
   },
+  {
+    id: 8,
+    img: estacionDescubriImg,
+    name: "Estación Descubrí",
+    description: "Esta estación funciona como punto de atención al público tanto para turistias como para locales.\nEn otros servicios, es posible alquilar bicicletas para recorrer el Eco Parque y el Paseo Costanero, o alquilar kayaks y tablas SUP para disfrutar en la laguna que se encuentra a pocos metros.",
+    ubication: "",
+    coordinates: {
+      latitude: null,
+      longitude: null,
+    },
+  },
+  {
+    id: 9,
+    img: skateparkImg,
+    name: "Skatepark",
+    description: "Desde su inauguración en 2014, esta pista se consagra como la más grande y completa del país. Es apta tanto para skate como para BMX y rollers.\nSu extensión de 2800 m2 y su variedad de obstáculos posibilitan la realización de competencias tanto a nivel amateur como profesional.",
+    ubication: "",
+    coordinates: {
+      latitude: null,
+      longitude: null,
+    },
+  },
+  {
+    id: 10,
+    img: casaDelAcuerdoImg,
+    name: "Casa del Acuerdo",
+    description: "Este monumento nacional alberga la memoria de la reunión que en 1852 celebraron los gobernadores de las diferentas provincias, en la cual firmaron el histórico acuerdo que precedió a la Constitución Nacional.\nAdemás de funcionar como museo, el complejo cuenta con una biblioteca especializada en historia argentina compuesta por mas 60 mil tomos.",
+    ubication: "",
+    coordinates: {
+      latitude: null,
+      longitude: null,
+    },
+  },
+  {
+    id: 11,
+    img: null,
+    name: "Teatro",
+    description: "El Teatro Municipal Rafel de Aguiar, ícono de la cultura y el arte local, fue inaugurado en el año 1908 y es reconocido como uno de los mejores teatros líricos del país.\nSu sala principal cuenta con capacidad para mas de 700 personas, las cuales pueden ser ubicadas a lo largo de los 3 pisos con cuales cuenta la instalación.",
+    ubication: "",
+    coordinates: {
+      latitude: null,
+      longitude: null,
+    },
+  },
+  {
+    id: 12,
+    img: arenalImg,
+    name: "Arenal",
+    description: "Habilitado en 2022 durante la temporada de verano, esta playa cuenta con todas las comodidades necesarias para compartir tardes con amigos y familia.\nDurante los horarios designados los guardavidas custodian a los visitantes, que también pueden disfrutar de juegos para niños, alquiler de sombrillas, baños, y venta de alimentos.",
+    ubication: "",
+    coordinates: {
+      latitude: null,
+      longitude: null,
+    },
+  },
+  {
+    id: 13,
+    img: null,
+    name: "Casa de Bogado",
+    description: "Construida en el año 1820, la casa en la cual falleció Félix Bogado es el monumento arquitectónico más antiguo de la ciudad.\nEl Coronel José Felix Bogado se desempeño como Comandante Militar de la ciudad y acompañó al General don José de San Martín en su campaña Libertadora.",
+    ubication: "",
+    coordinates: {
+      latitude: null,
+      longitude: null,
+    },
+  }
+  // {
+  //   id: 0,
+  //   img: null,
+  //   name: "",
+  //   description: "",
+  //   ubication: "",
+  //   coordinates: {
+  //     latitude: null,
+  //     longitude: null,
+  //   },
+  // }
 ];
 
 export default places;

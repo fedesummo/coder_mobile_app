@@ -4,7 +4,7 @@ import { useMemo } from "react";
 import {
   SignIn,
   SignUp,
-  // Home,
+  Home,
   Discover,
   Place,
   Scanner,
@@ -28,7 +28,7 @@ const AppNavigator = () => {
     <NavigationContainer>
       <Drawer.Navigator
         // initialRouteName="SignIn"
-        initialRouteName="Discover"
+        initialRouteName="Home"
         screenOptions={{ headerShown: false }}
       >
         <Drawer.Screen
@@ -41,11 +41,11 @@ const AppNavigator = () => {
           component={SignUp}
           options={hideOnDrawer}
         />
-        {/* <Drawer.Screen
+        <Drawer.Screen
           name="Home"
           component={Home}
           options={{ title: "Inicio" }}
-        /> */}
+        />
         <Drawer.Screen
           name="Discover"
           component={Discover}

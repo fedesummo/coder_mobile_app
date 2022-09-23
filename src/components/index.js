@@ -8,3 +8,4 @@ export { default as SecondaryBtn } from "./SecondaryBtn";
 export { default as SessionHandler } from "./SessionHandler";
 export { default as ImgBtn } from "./ImgBtn";
 export { default as SafeAreaView } from "./SafeAreaView";
+export { default as Section } from "./Section";

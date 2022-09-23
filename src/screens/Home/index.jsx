@@ -1,53 +1,55 @@
-import MostVisitedList from "./components/MostVisitedList";
 import SectionHeader from "./components/SectionHeader";
-import { ScreenContainer, Header } from "~components";
-import SectionsList from "./components/SectionsList";
-import { View, StyleSheet } from "react-native";
-import NewsList from "./components/NewsList";
-import { useSelector } from "react-redux";
-import { useEffect } from "react";
-// import styles from "./styles";
+import { SafeAreaView, Text, Header, Section } from "~components";
+import { FlatList, ScrollView } from "react-native";
+import { useCallback, useEffect, useMemo } from "react";
+import styles from "./styles";
+import { places } from "~constants";
 
 const Home = () => {
-  const { displayName } = useSelector(({ auth }) => auth.displayName);
+  const getMostVisitedPlaces = useCallback(() => {
+    const randomPlaces = [];
+    for (let i = 0; i < 4; i++) {
+      randomPlaces.push(places[Math.floor(Math.random() * places.length)]);
+    }
+    return randomPlaces;
+  }, [places]);
 
   return (
-    <ScreenContainer scroll style={{ paddingLeft: 8 }}>
-      <Header
-        heading={displayName ? `¡Hola, ${displayName}!` : "¡Bienvenido!"}
-        subHeading="¿Que actividad vas a hacer hoy?"
-      />
+    <SafeAreaView>
+      <ScrollView>
+        <Section heading="Los más visitados" data={getMostVisitedPlaces()} />
 
-      {/* Sections */}
-      <View style={styles.sectionContainer}>
-        <SectionHeader heading="Secciones" />
-        <SectionsList />
-      </View>
+        
+      </ScrollView>
+    </SafeAreaView>
 
-      {/* News */}
-      <View style={styles.sectionContainer}>
-        <SectionHeader heading="Noticias" />
-        <NewsList />
-      </View>
+    // <ScreenContainer scroll style={{ paddingLeft: 8 }}>
+    //   <Header heading="¡Bienvenido!"/>
 
-      {/* Most Visited */}
-      <View style={styles.sectionContainer}>
-        <SectionHeader heading="Los más visitados" toScreen="Discover" />
-        <MostVisitedList />
-      </View>
+    //   {/* Sections */}
+    //   <View style={styles.sectionContainer}>
+    //     <SectionHeader heading="Secciones" />
+    //     <SectionsList />
+    //   </View>
 
-      {/* Events */}
-      {/* <View>
-        <SectionHeader heading="Próximos eventos"/>
-      </View> */}
-    </ScreenContainer>
+    //   {/* News */}
+    //   <View style={styles.sectionContainer}>
+    //     <SectionHeader heading="Noticias" />
+    //     <NewsList />
+    //   </View>
+
+    //   {/* Most Visited */}
+    //   <View style={styles.sectionContainer}>
+    //     <SectionHeader heading="Los más visitados" toScreen="Discover" />
+    //     <MostVisitedList />
+    //   </View>
+
+    //   {/* Events */}
+    //   {/* <View>
+    //     <SectionHeader heading="Próximos eventos"/>
+    //   </View> */}
+    // </ScreenContainer>
   );
 };
 
 export default Home;
-
-const styles = StyleSheet.create({
-  sectionContainer: {
-    marginBottom: 15,
-  },
-});

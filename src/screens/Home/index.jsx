@@ -18,14 +18,34 @@ const Home = () => {
   const components = useMemo(
     () => [
       <View style={styles.btnsCnt}>
-        <LinkBtn text="QR Escáner" iconName="qr-code-outline" toScreen="Scanner" />
+        <LinkBtn
+          text="QR Escáner"
+          iconName="qr-code-outline"
+          toScreen="Scanner"
+        />
         <View style={styles.btnsGap}></View>
         <LinkBtn text="Mapa" iconName="map" toScreen="Map" />
       </View>,
-      <Section heading="Los más visitados" data={getMostVisitedPlaces()} />,
-      <Section heading="Espacio públicos" data={getMostVisitedPlaces()} />,
-      <Section heading="Gastronomía" data={getMostVisitedPlaces()} />,
-      <Section heading="Alojamiento" data={getMostVisitedPlaces()} />,
+      <Section
+        heading="Los más visitados"
+        data={getMostVisitedPlaces()}
+        category={null}
+      />,
+      <Section
+        heading="Circuito turístico"
+        data={getMostVisitedPlaces()}
+        category="tourist-circuit"
+      />,
+      <Section
+        heading="Gastronomía"
+        data={getMostVisitedPlaces()}
+        category="gastronomy"
+      />,
+      <Section
+        heading="Alojamiento"
+        data={getMostVisitedPlaces()}
+        category="accommodation"
+      />,
     ],
     []
   );

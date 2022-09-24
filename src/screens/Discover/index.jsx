@@ -1,10 +1,33 @@
 import { SafeAreaView, Header, ImgBtn } from "~components";
 import MasonryList from "@react-native-seoul/masonry-list";
+import { useRoute } from "@react-navigation/native";
 import places from "~constants/places";
 import { useCallback } from "react";
 import styles from "./styles";
+import { useEffect } from "react";
+import { useState } from "react";
 
 const Discover = () => {
+  const { params } = useRoute();
+
+  const [placesList, setPlacesList] = useState([]);
+
+  const getPlacesByCategory = useCallback(
+    (category) => {
+      if (category) {
+        const filteredPlaces = places.filter(
+          (element) => element.category === category
+        );
+        setPlacesList(filteredPlaces);
+      } else {
+        setPlacesList(places);
+      }
+    },
+    [places]
+  );
+
+  useEffect(() => getPlacesByCategory(params?.category), [params]);
+
   const getItemHeight = useCallback(
     (index) => {
       if (index === 0 || index === places.length - 1) {
@@ -30,10 +53,11 @@ const Discover = () => {
     <SafeAreaView>
       <MasonryList
         ListHeaderComponent={<Header heading="Descubrí" />}
-        style={styles.listCnt}
-        data={places}
+        showsVerticalScrollIndicator={false}
         renderItem={renderItem}
+        style={styles.listCnt}
         numColumns={2}
+        data={placesList}
       />
     </SafeAreaView>
   );

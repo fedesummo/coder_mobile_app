@@ -5,7 +5,7 @@ import { useCallback } from "react";
 import { View, Text, Pressable } from "react-native";
 import styles from "./styles";
 
-const Section = ({ heading, data, style }) => {
+const Section = ({ heading, data, style, category }) => {
   const navigation = useNavigation();
 
   const getItemHeigth = useCallback(
@@ -37,7 +37,7 @@ const Section = ({ heading, data, style }) => {
     <View style={{...style}}>
       <View style={styles.headerCnt}>
         <Text style={styles.heading}>{heading}</Text>
-        <Pressable onPress={() => navigation.push("")}>
+        <Pressable onPress={() => navigation.navigate("Discover", { category })}>
           <Text style={styles.link}>Ver todos {">"}</Text>
         </Pressable>
       </View>

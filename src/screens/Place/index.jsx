@@ -1,7 +1,6 @@
+import { useNavigation, useRoute } from "@react-navigation/native";
 import { View, ImageBackground, Text } from "react-native";
 import { useEffect, useCallback, useState } from "react";
-import { useNavigation } from "@react-navigation/native";
-import { useRoute } from "@react-navigation/native";
 import { BackBtn, PrimaryBtn } from "~components";
 import { FontAwesome } from "@expo/vector-icons";
 import { places } from "~constants";

@@ -1,28 +1,7 @@
-import autodromoImg from "~assets/places/autodromo.jpg";
-import ecoparqueImg from "~assets/places/ecoparque.jpg";
-import estadioImg from "~assets/places/estadio.jpg";
-import parqueSanMartinImg from "~assets/places/parque-san-martin.jpg";
-import plazaMitreImg from "~assets/places/plaza-mitre.jpg";
-import santuarioImg from "~assets/places/santuario.png";
-import cementerioImg from "~assets/places/cementerio.jpg";
-import estacionDescubriImg from "~assets/places/estacion-descubri.jpeg";
-import skateparkImg from "~assets/places/skatepark.jpg";
-import casaDelAcuerdoImg from "~assets/places/casa-del-acuerdo.jpg";
-import arenalImg from "~assets/places/arenal.png";
-import casaBodagoImg from "~assets/places/casa-bogado.jpg";
-import teatroImg from "~assets/places/teatro.png";
-import elCafe from "~assets/places/el-cafe.jpg";
-import hotelColonial from "~assets/places/hotel-colonial.png";
-import hotelPlaza from "~assets/places/hotel-plaza.jpg";
-import laMira from "~assets/places/la-mira.jpg";
-import baku from "~assets/places/baku.png";
-import elSanMartin from "~assets/places/el-san-martin.jpeg";
-import cervezia from "~assets/places/cervezia.jpg";
-
 const places = [
   {
     id: 0,
-    img: ecoparqueImg,
+    img: "https://raw.githubusercontent.com/fedesummo/coder_mobile_app/main/src/assets/ecoparque.jpg",
     name: "Eco Parque",
     category: "tourist-circuit",
     description:
@@ -35,7 +14,7 @@ const places = [
   },
   {
     id: 2,
-    img: cementerioImg,
+    img: "https://raw.githubusercontent.com/fedesummo/coder_mobile_app/main/src/assets/cementerio.jpg",
     name: "Cementerio",
     category: "tourist-circuit",
     description:
@@ -48,7 +27,7 @@ const places = [
   },
   {
     id: 3,
-    img: estadioImg,
+    img: "https://raw.githubusercontent.com/fedesummo/coder_mobile_app/main/src/assets/estadio.jpg",
     name: "Estadio",
     category: "tourist-circuit",
     description: "",
@@ -59,7 +38,7 @@ const places = [
   },
   {
     id: 4,
-    img: santuarioImg,
+    img: "https://raw.githubusercontent.com/fedesummo/coder_mobile_app/main/src/assets/santuario.png",
     name: "Santuario",
     category: "tourist-circuit",
     description:
@@ -71,7 +50,7 @@ const places = [
   },
   {
     id: 5,
-    img: parqueSanMartinImg,
+    img: "https://raw.githubusercontent.com/fedesummo/coder_mobile_app/main/src/assets/parque-san-martin.jpg",
     name: "Parque San Martín",
     category: "tourist-circuit",
     description:
@@ -83,7 +62,7 @@ const places = [
   },
   {
     id: 6,
-    img: plazaMitreImg,
+    img: "https://raw.githubusercontent.com/fedesummo/coder_mobile_app/main/src/assets/plaza-mitre.png",
     name: "Plaza Mitre",
     category: "tourist-circuit",
     description:
@@ -95,7 +74,7 @@ const places = [
   },
   {
     id: 7,
-    img: autodromoImg,
+    img: "https://raw.githubusercontent.com/fedesummo/coder_mobile_app/main/src/assets/autodromo.jpg",
     name: "Autódromo",
     category: "tourist-circuit",
     description:
@@ -108,7 +87,7 @@ const places = [
   },
   {
     id: 8,
-    img: estacionDescubriImg,
+    img: "https://raw.githubusercontent.com/fedesummo/coder_mobile_app/main/src/assets/estacion-descubri.jpeg",
     name: "Estación Descubrí",
     category: "tourist-circuit",
     description:
@@ -121,7 +100,7 @@ const places = [
   },
   {
     id: 9,
-    img: skateparkImg,
+    img: "https://raw.githubusercontent.com/fedesummo/coder_mobile_app/main/src/assets/skatepark.jpg",
     name: "Skatepark",
     category: "tourist-circuit",
     description:
@@ -134,7 +113,7 @@ const places = [
   },
   {
     id: 10,
-    img: casaDelAcuerdoImg,
+    img: "https://raw.githubusercontent.com/fedesummo/coder_mobile_app/main/src/assets/casa-del-acuerdo.jpg",
     name: "Casa del Acuerdo",
     category: "tourist-circuit",
     description:
@@ -147,10 +126,9 @@ const places = [
   },
   {
     id: 11,
-    img: teatroImg,
+    img: "https://raw.githubusercontent.com/fedesummo/coder_mobile_app/main/src/assets/teatro.png",
     name: "Teatro",
     category: "tourist-circuit",
-
     description:
       "El Teatro Municipal Rafel de Aguiar, ícono de la cultura y el arte local, fue inaugurado en el año 1908 y es reconocido como uno de los mejores teatros líricos del país.\nSu sala principal cuenta con capacidad para mas de 700 personas, las cuales pueden ser ubicadas a lo largo de los 3 pisos con cuales cuenta la instalación.",
     ubication: "",
@@ -161,10 +139,9 @@ const places = [
   },
   {
     id: 12,
-    img: arenalImg,
+    img: "https://raw.githubusercontent.com/fedesummo/coder_mobile_app/main/src/assets/arenal.png",
     name: "Arenal",
     category: "tourist-circuit",
-
     description:
       "Habilitado en 2022 durante la temporada de verano, esta playa cuenta con todas las comodidades necesarias para compartir tardes con amigos y familia.\nDurante los horarios designados los guardavidas custodian a los visitantes, que también pueden disfrutar de juegos para niños, alquiler de sombrillas, baños, y venta de alimentos.",
     ubication: "",
@@ -175,10 +152,9 @@ const places = [
   },
   {
     id: 13,
-    img: casaBodagoImg,
+    img: "https://raw.githubusercontent.com/fedesummo/coder_mobile_app/main/src/assets/casa-bogado.jpg",
     name: "Casa de Bogado",
     category: "tourist-circuit",
-
     description:
       "Construida en el año 1820, la casa en la cual falleció Félix Bogado es el monumento arquitectónico más antiguo de la ciudad.\nEl Coronel José Felix Bogado se desempeño como Comandante Militar de la ciudad y acompañó al General don José de San Martín en su campaña Libertadora.",
     ubication: "",
@@ -189,10 +165,9 @@ const places = [
   },
   {
     id: 14,
-    img: elCafe,
+    img: "https://raw.githubusercontent.com/fedesummo/coder_mobile_app/main/src/assets/el-cafe.jpg",
     name: "El café",
     category: "gastronomy",
-
     description: "",
     ubication: "",
     coordinates: {
@@ -202,10 +177,9 @@ const places = [
   },
   {
     id: 15,
-    img: hotelColonial,
+    img: "https://raw.githubusercontent.com/fedesummo/coder_mobile_app/main/src/assets/hotel-colonial.png",
     name: "Hotel Colonial",
     category: "accommodation",
-
     description: "",
     ubication: "",
     coordinates: {
@@ -215,10 +189,9 @@ const places = [
   },
   {
     id: 16,
-    img: hotelPlaza,
+    img: "https://raw.githubusercontent.com/fedesummo/coder_mobile_app/main/src/assets/hotel-plaza.jpg",
     name: "Hotel Plaza",
     category: "accommodation",
-
     description: "",
     ubication: "",
     coordinates: {
@@ -228,7 +201,7 @@ const places = [
   },
   {
     id: 17,
-    img: laMira,
+    img: "https://raw.githubusercontent.com/fedesummo/coder_mobile_app/main/src/assets/la-mira.jpg",
     name: "La Mira",
     category: "gastronomy",
     description: "La mira",
@@ -240,7 +213,7 @@ const places = [
   },
   {
     id: 18,
-    img: baku,
+    img: "https://raw.githubusercontent.com/fedesummo/coder_mobile_app/main/src/assets/baku.png",
     name: "Baku",
     category: "gastronomy",
     description: "",
@@ -252,7 +225,7 @@ const places = [
   },
   {
     id: 19,
-    img: elSanMartin,
+    img: "https://raw.githubusercontent.com/fedesummo/coder_mobile_app/main/src/assets/el-san-martin.jpeg",
     name: "El San Martín",
     category: "gastronomy",
     description: "",
@@ -264,7 +237,7 @@ const places = [
   },
   {
     id: 20,
-    img: cervezia,
+    img: "https://raw.githubusercontent.com/fedesummo/coder_mobile_app/main/src/assets/cervezia.png",
     name: "Cervezia",
     category: "gastronomy",
     description: "",
@@ -274,17 +247,78 @@ const places = [
       longitude: null,
     },
   },
-  // {
-  //   id: 0,
-  //   img: null,
-  //   name: "",
-  //   description: "",
-  //   ubication: "",
-  //   coordinates: {
-  //     latitude: null,
-  //     longitude: null,
-  //   },
-  // },
+  {
+    id: 21,
+    img: "https://raw.githubusercontent.com/fedesummo/coder_mobile_app/main/src/assets/arroyos-apart.jpg",
+    name: "De los Arroyos Aport",
+    category: "accommodation",
+    description: "",
+    ubication: "",
+    coordinates: {
+      latitude: null,
+      longitude: null,
+    },
+  },
+  {
+    id: 22,
+    img: "https://raw.githubusercontent.com/fedesummo/coder_mobile_app/main/src/assets/bartolome.jpg",
+    name: "Comedor Bartolomé",
+    category: "gastronomy",
+    description: "",
+    ubication: "",
+    coordinates: {
+      latitude: null,
+      longitude: null,
+    },
+  },
+  {
+    id: 23,
+    img: "https://raw.githubusercontent.com/fedesummo/coder_mobile_app/main/src/assets/chozas-urbanas.jpg",
+    category: "accommodation",
+    name: "Raíces Chozas Urbanas",
+    description: "",
+    ubication: "",
+    coordinates: {
+      latitude: null,
+      longitude: null,
+    },
+  },
+  {
+    id: 24,
+    img: "https://raw.githubusercontent.com/fedesummo/coder_mobile_app/main/src/assets/hotel-belgrano.jpg",
+    name: "Hotel Belgrano",
+    category: "accommodation",
+    description: "",
+    ubication: "",
+    coordinates: {
+      latitude: null,
+      longitude: null,
+    },
+  },
+  {
+    id: 25,
+    img: "https://raw.githubusercontent.com/fedesummo/coder_mobile_app/main/src/assets/micerino-flat.jpg",
+    name: "Hotel Micerino Flat",
+    category: "accommodation",
+    description: "",
+    ubication: "",
+    coordinates: {
+      latitude: null,
+      longitude: null,
+    },
+  },
+  {
+    id: 26,
+    img: "https://raw.githubusercontent.com/fedesummo/coder_mobile_app/main/src/assets/palacio-municipal.png",
+    name: "Palacio Municipal",
+    category: "tourist-circuit",
+    description: "",
+    ubication: "",
+    coordinates: {
+      latitude: null,
+      longitude: null,
+    },
+  },
 ];
 
 export default places;

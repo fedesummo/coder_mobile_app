@@ -1,34 +1,42 @@
-import { FlatList, StyleSheet } from "react-native";
-import { ScreenContainer, Header, PlaceItem } from "~components";
+import { SafeAreaView, Header, ImgBtn } from "~components";
+import MasonryList from "@react-native-seoul/masonry-list";
 import places from "~constants/places";
-import colors from "~constants/colors";
+import { useCallback } from "react";
+import styles from "./styles";
 
 const Discover = () => {
-  const renderItem = ({ item }) => (
-    <PlaceItem data={item} style={styles.item} />
+  const getItemHeight = useCallback(
+    (index) => {
+      if (index === 0 || index === places.length - 1) {
+        return 230;
+      } else {
+        return 260;
+      }
+    },
+    [places]
+  );
+
+  const renderItem = useCallback(
+    ({ item, i }) => (
+      <ImgBtn
+        data={item}
+        style={{ ...styles.item, height: getItemHeight(i) }}
+      />
+    ),
+    [styles]
   );
 
   return (
-    <ScreenContainer>
-      <FlatList
-        showsVerticalScrollIndicator={false}
+    <SafeAreaView>
+      <MasonryList
+        ListHeaderComponent={<Header heading="Descubrí" />}
+        style={styles.listCnt}
         data={places}
-        ListHeaderComponent={
-          <Header heading="Descubrí" subHeading="¿Ya conocías estos lugares?" />
-        }
         renderItem={renderItem}
-        keyExtractor={(item) => item.id}
         numColumns={2}
-        columnWrapperStyle={{ justifyContent: "space-between" }}
       />
-    </ScreenContainer>
+    </SafeAreaView>
   );
 };
 
 export default Discover;
-
-const styles = StyleSheet.create({
-  item: {
-    width: "47%",
-  },
-});

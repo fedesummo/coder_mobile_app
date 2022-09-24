@@ -8,7 +8,6 @@ import {
   Discover,
   Place,
   Scanner,
-  Rewards,
   SignOut,
   Map,
 } from "~screens/index";
@@ -59,11 +58,6 @@ const AppNavigator = () => {
           options={{ title: "QR Escáner" }}
         />
         <Drawer.Screen name="Map" component={Map} options={{ title: "Mapa" }} />
-        <Drawer.Screen
-          name="Rewards"
-          component={Rewards}
-          options={{ title: "Beneficios" }}
-        />
         <Drawer.Screen
           name="SignOut"
           component={SignOut}

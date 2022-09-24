@@ -2,10 +2,10 @@ import { useNavigation } from "@react-navigation/native";
 import MasonryList from "@react-native-seoul/masonry-list";
 import { ImgBtn } from "~components";
 import { useCallback } from "react";
-import { View } from "react-native";
+import { View, Text, Pressable } from "react-native";
 import styles from "./styles";
 
-const Section = ({ data }) => {
+const Section = ({ heading, data, style }) => {
   const navigation = useNavigation();
 
   const getItemHeigth = useCallback(
@@ -34,8 +34,13 @@ const Section = ({ data }) => {
   );
 
   return (
-    <View>
-      
+    <View style={{...style}}>
+      <View style={styles.headerCnt}>
+        <Text style={styles.heading}>{heading}</Text>
+        <Pressable onPress={() => navigation.push("")}>
+          <Text style={styles.link}>Ver todos {">"}</Text>
+        </Pressable>
+      </View>
       <MasonryList data={data} numColumns={2} renderItem={renderItem} />
     </View>
   );

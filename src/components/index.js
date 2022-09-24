@@ -1,5 +1,3 @@
-export { default as ScreenContainer } from "./ScreenContainer";
-export { default as ItemsSeparator } from "./ItemsSeparator";
 export { default as Header } from "./Header";
 export { default as BackBtn } from "./BackBtn";
 export { default as PrimaryBtn } from "./PrimaryBtn";
@@ -9,3 +7,4 @@ export { default as SessionHandler } from "./SessionHandler";
 export { default as ImgBtn } from "./ImgBtn";
 export { default as SafeAreaView } from "./SafeAreaView";
 export { default as Section } from "./Section";
+export { default as LinkBtn } from "./LinkBtn";

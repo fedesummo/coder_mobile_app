@@ -1,10 +1,19 @@
 import { StyleSheet } from "react-native";
 
 const styles = StyleSheet.create({
-  cnt: {
-    borderWidth: 2,
+  headerCnt: {
     flexDirection: "row",
-    flexWrap: "wrap",
+    justifyContent: "space-between",
+    alignItems: "center",
+  },
+  heading: {
+    fontSize: 25,
+    fontWeight: "500",
+    marginBottom: 3,
+  },
+  link: {
+    fontSize: 13,
+    marginRight: 8,
   },
   childCnt: {
     width: "50%",
@@ -14,10 +23,10 @@ const styles = StyleSheet.create({
     // borderColor: "red",
   },
   tallerCnt: {
-      height: 280
+    height: 280,
   },
   shorterCnt: {
-      height: 230
+    height: 230,
   },
 });
 

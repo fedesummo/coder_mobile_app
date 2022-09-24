@@ -26,6 +26,7 @@ const Place = () => {
     <ImageBackground
       style={styles.screenCnt}
       imageStyle={styles.bgImg}
+      // source={{uri: ""}}
       source={placeData.img}
       resizeMode="cover"
     >

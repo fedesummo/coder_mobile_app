@@ -1,16 +1,12 @@
 import { Input, PrimaryBtn, SecondaryBtn } from "~components";
 import { useNavigation } from "@react-navigation/native";
 import { View, StyleSheet, Image } from "react-native";
-import { useDispatch, useSelector } from "react-redux";
-import { colors, fontSizes } from "~constants";
 import { signIn } from "~store/auth/actions";
 import snLogo from "./assets/sn-logo.png";
+import { useDispatch } from "react-redux";
 import { useState } from "react";
-import { useEffect } from "react";
 
 const SignIn = () => {
-  const user_id = useSelector(({ auth }) => auth.user_id);
-
   const dispatch = useDispatch();
   const navigation = useNavigation();
 
@@ -23,18 +19,6 @@ const SignIn = () => {
   const submitForm = () => {
     dispatch(signIn({ email, password }));
   };
-
-  const resetForm = () => {
-    setEmail("");
-    setPassword("");
-  };
-
-  useEffect(() => {
-    if (user_id) {
-      resetForm();
-      navigation.navigate("Home");
-    }
-  }, [user_id]);
 
   return (
     <View style={styles.screenContainer}>

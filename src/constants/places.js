@@ -92,10 +92,10 @@ const places = [
     category: "tourist-circuit",
     description:
       "Esta estación funciona como punto de atención al público tanto para turistias como para locales.\nEn otros servicios, es posible alquilar bicicletas para recorrer el Eco Parque y el Paseo Costanero, o alquilar kayaks y tablas SUP para disfrutar en la laguna que se encuentra a pocos metros.",
-    ubication: "",
+    ubication: "Av. Viale y Paseo costanero",
     coordinates: {
-      latitude: null,
-      longitude: null,
+      latitude: -33.318119267300496,
+      longitude: -60.22486815228364,
     },
   },
   {
@@ -105,10 +105,10 @@ const places = [
     category: "tourist-circuit",
     description:
       "Desde su inauguración en 2014, esta pista se consagra como la más grande y completa del país. Es apta tanto para skate como para BMX y rollers.\nSu extensión de 2800 m2 y su variedad de obstáculos posibilitan la realización de competencias tanto a nivel amateur como profesional.",
-    ubication: "",
+    ubication: "Av. Pres. Juan Domingo Perón 2049",
     coordinates: {
-      latitude: null,
-      longitude: null,
+      latitude: -33.35123120199996,
+      longitude: -60.240669375543426,
     },
   },
   {
@@ -118,10 +118,10 @@ const places = [
     category: "tourist-circuit",
     description:
       "Este monumento nacional alberga la memoria de la reunión que en 1852 celebraron los gobernadores de las diferentas provincias, en la cual firmaron el histórico acuerdo que precedió a la Constitución Nacional.\nAdemás de funcionar como museo, el complejo cuenta con una biblioteca especializada en historia argentina compuesta por mas 60 mil tomos.",
-    ubication: "",
+    ubication: "De la Nación 143",
     coordinates: {
-      latitude: null,
-      longitude: null,
+      latitude: -33.32927558926494,
+      longitude: -60.2169756750404,
     },
   },
   {
@@ -131,10 +131,10 @@ const places = [
     category: "tourist-circuit",
     description:
       "El Teatro Municipal Rafel de Aguiar, ícono de la cultura y el arte local, fue inaugurado en el año 1908 y es reconocido como uno de los mejores teatros líricos del país.\nSu sala principal cuenta con capacidad para mas de 700 personas, las cuales pueden ser ubicadas a lo largo de los 3 pisos con cuales cuenta la instalación.",
-    ubication: "",
+    ubication: "De la nación 346",
     coordinates: {
-      latitude: null,
-      longitude: null,
+      latitude: -33.333531674716,
+      longitude: -60.22020532900297,
     },
   },
   {
@@ -144,10 +144,10 @@ const places = [
     category: "tourist-circuit",
     description:
       "Habilitado en 2022 durante la temporada de verano, esta playa cuenta con todas las comodidades necesarias para compartir tardes con amigos y familia.\nDurante los horarios designados los guardavidas custodian a los visitantes, que también pueden disfrutar de juegos para niños, alquiler de sombrillas, baños, y venta de alimentos.",
-    ubication: "",
+    ubication: "Frente al río paraná",
     coordinates: {
-      latitude: null,
-      longitude: null,
+      latitude: -33.31930546377719,
+      longitude: -60.18901934136194,
     },
   },
   {
@@ -157,10 +157,10 @@ const places = [
     category: "tourist-circuit",
     description:
       "Construida en el año 1820, la casa en la cual falleció Félix Bogado es el monumento arquitectónico más antiguo de la ciudad.\nEl Coronel José Felix Bogado se desempeño como Comandante Militar de la ciudad y acompañó al General don José de San Martín en su campaña Libertadora.",
-    ubication: "",
+    ubication: "Francia 223",
     coordinates: {
-      latitude: null,
-      longitude: null,
+      latitude: -33.32608856469615,
+      longitude: -60.2216459062447,
     },
   },
   {
@@ -169,10 +169,10 @@ const places = [
     name: "El café",
     category: "gastronomy",
     description: "",
-    ubication: "",
+    ubication: "Sarmiento 54",
     coordinates: {
-      latitude: null,
-      longitude: null,
+      latitude: -33.32765878848322,
+      longitude: -60.21712966762476,
     },
   },
   {
@@ -181,10 +181,10 @@ const places = [
     name: "Hotel Colonial",
     category: "accommodation",
     description: "",
-    ubication: "",
+    ubication: "Av. Savio 2195",
     coordinates: {
-      latitude: null,
-      longitude: null,
+      latitude: -33.36838360030544,
+      longitude: -60.17737248648413,
     },
   },
   {
@@ -193,10 +193,10 @@ const places = [
     name: "Hotel Plaza",
     category: "accommodation",
     description: "",
-    ubication: "",
+    ubication: "De la Nación 144",
     coordinates: {
-      latitude: null,
-      longitude: null,
+      latitude: -33.32934360303619,
+      longitude: -60.21654261365963,
     },
   },
   {
@@ -205,10 +205,10 @@ const places = [
     name: "La Mira",
     category: "gastronomy",
     description: "La mira",
-    ubication: "",
+    ubication: "Mitre 96",
     coordinates: {
-      latitude: null,
-      longitude: null,
+      latitude: -33.32781959067464,
+      longitude: -60.217034459695945,
     },
   },
   {
@@ -217,10 +217,10 @@ const places = [
     name: "Baku",
     category: "gastronomy",
     description: "",
-    ubication: "",
+    ubication: "De la Nación 150",
     coordinates: {
-      latitude: null,
-      longitude: null,
+      latitude: -33.329663118719985,
+      longitude: -60.216319629517145,
     },
   },
   {
@@ -229,34 +229,34 @@ const places = [
     name: "El San Martín",
     category: "gastronomy",
     description: "",
-    ubication: "",
+    ubication: "Parque San Martín",
     coordinates: {
-      latitude: null,
-      longitude: null,
+      latitude: -33.33009790379092,
+      longitude: -60.209342167623795,
     },
   },
   {
     id: 20,
     img: "https://raw.githubusercontent.com/fedesummo/coder_mobile_app/main/src/assets/cervezia.png",
-    name: "Cervezia",
+    name: "Cervêsïa",
     category: "gastronomy",
     description: "",
-    ubication: "",
+    ubication: "Mitre 148",
     coordinates: {
-      latitude: null,
-      longitude: null,
+      latitude: -33.329064568298676,
+      longitude: -60.21705393744635,
     },
   },
   {
     id: 21,
     img: "https://raw.githubusercontent.com/fedesummo/coder_mobile_app/main/src/assets/arroyos-apart.jpg",
-    name: "De los Arroyos Aport",
+    name: "De los Arroyos Apart Hotel",
     category: "accommodation",
     description: "",
-    ubication: "",
+    ubication: "Mitre 385",
     coordinates: {
-      latitude: null,
-      longitude: null,
+      latitude: -33.33333662243761,
+      longitude: -60.22236927555125,
     },
   },
   {
@@ -265,10 +265,10 @@ const places = [
     name: "Comedor Bartolomé",
     category: "gastronomy",
     description: "",
-    ubication: "",
+    ubication: "Mitre 90",
     coordinates: {
-      latitude: null,
-      longitude: null,
+      latitude: -33.32770016067198,
+      longitude: -60.21614771417281,
     },
   },
   {
@@ -277,22 +277,22 @@ const places = [
     category: "accommodation",
     name: "Raíces Chozas Urbanas",
     description: "",
-    ubication: "",
+    ubication: "Av. Hipólito Irigoyen 1477",
     coordinates: {
-      latitude: null,
-      longitude: null,
+      latitude: -33.37946596030901,
+      longitude: -60.210827244841134,
     },
   },
   {
     id: 24,
     img: "https://raw.githubusercontent.com/fedesummo/coder_mobile_app/main/src/assets/hotel-belgrano.jpg",
-    name: "Hotel Belgrano",
+    name: "Nuevo Hotel Belgrano",
     category: "accommodation",
     description: "",
-    ubication: "",
+    ubication: "Belgrano 89",
     coordinates: {
-      latitude: null,
-      longitude: null,
+      latitude: -33.32676335373694,
+      longitude: -60.21762211417319,
     },
   },
   {
@@ -301,10 +301,10 @@ const places = [
     name: "Hotel Micerino Flat",
     category: "accommodation",
     description: "",
-    ubication: "",
+    ubication: "Garibaldi 410",
     coordinates: {
-      latitude: null,
-      longitude: null,
+      latitude: -33.336330363392875, 
+      longitude: -60.21865299882385
     },
   },
   {
@@ -313,10 +313,10 @@ const places = [
     name: "Palacio Municipal",
     category: "tourist-circuit",
     description: "",
-    ubication: "",
+    ubication: "Rivadavia 51",
     coordinates: {
-      latitude: null,
-      longitude: null,
+      latitude: -33.33022714138496, 
+      longitude: -60.21449515495601,
     },
   },
 ];

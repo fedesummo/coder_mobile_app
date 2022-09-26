@@ -45,7 +45,9 @@ const Place = () => {
         <PrimaryBtn
           transparent
           text="Ver en el mapa"
-          onPress={() => navigation.navigate("Map")}
+          onPress={() =>
+            navigation.navigate("Map", { coordinates: placeData.coordinates })
+          }
         />
       </View>
     </ImageBackground>

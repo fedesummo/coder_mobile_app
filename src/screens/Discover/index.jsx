@@ -1,14 +1,15 @@
-import { SafeAreaView, Header, ImgBtn } from "~components";
 import MasonryList from "@react-native-seoul/masonry-list";
+import { SafeAreaView, Header, ImgBtn } from "~components";
+import { useState, useCallback, useEffect } from "react";
 import { useRoute } from "@react-navigation/native";
-import places from "~constants/places";
-import { useCallback } from "react";
+import { useSelector } from "react-redux";
+import { Text } from "react-native";
 import styles from "./styles";
-import { useEffect } from "react";
-import { useState } from "react";
 
 const Discover = () => {
   const { params } = useRoute();
+
+  const places = useSelector(({ places }) => places.places);
 
   const [placesList, setPlacesList] = useState([]);
 
@@ -49,7 +50,7 @@ const Discover = () => {
     [styles]
   );
 
-  return (
+  return places.length ? (
     <SafeAreaView>
       <MasonryList
         ListHeaderComponent={<Header heading="Descubrí" />}
@@ -60,6 +61,8 @@ const Discover = () => {
         data={placesList}
       />
     </SafeAreaView>
+  ) : (
+    <Text>Cargando...</Text>
   );
 };
 

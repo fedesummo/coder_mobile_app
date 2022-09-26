@@ -1,6 +1,6 @@
 const fontSizes = {
   header: 25,
-  general: 16,
+  general: 17,
   title: 35,
 };
 

@@ -19,9 +19,8 @@ export const axiosIdToken = axios.create({
   baseURL: `https://securetoken.googleapis.com/v1/token?key=${FIREBASE_API_KEY}`,
 });
 
-// Realtime Database
-// const URL_API = "https://sn-mobile-8a480-default-rtdb.firebaseio.com/";
+// Firebase Realtime Databse
+export const axiosPlaces = axios.create({
+  baseURL: "https://sn-mobile-8a480-default-rtdb.firebaseio.com/.json"
+});
 
-// Test user - Credentials
-// email: email@test.com
-// password: 123456

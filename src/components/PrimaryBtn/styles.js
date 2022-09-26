@@ -10,6 +10,7 @@ const styles = StyleSheet.create({
     fontSize: fontSizes.general,
     textAlign: "center",
     color: "white",
+    fontWeight: "600",
   },
 });
 

@@ -17,10 +17,6 @@ const styles = StyleSheet.create({
   },
   childCnt: {
     width: "50%",
-    // backgroundColor: "gray",
-    // height: 200,
-    // borderWidth: 1,
-    // borderColor: "red",
   },
   tallerCnt: {
     height: 280,
@@ -28,6 +24,9 @@ const styles = StyleSheet.create({
   shorterCnt: {
     height: 230,
   },
+  listCnt: {
+    paddingBottom: 10,
+  }
 });
 
 export default styles;

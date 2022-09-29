@@ -8,9 +8,10 @@ const styles = StyleSheet.create({
   btnsCnt: {
     flexDirection: "row",
     justifyContent: "space-between",
+    marginBottom: 8,
   },
-  sectionsGap: {
-    marginBottom: 25,
+  listGap: {
+    marginVertical: 3,
   },
 });
 

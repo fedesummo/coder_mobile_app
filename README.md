@@ -1,9 +1,8 @@
-# Coderhouse - Desarrollo de Aplicaciones
-La presente aplicación tiene como objetivo ser la acompañante de todos los ciudadanos de San Nicolás de los Arroyos.  
-Permitirá acceder a información acerca de los puntos de interés de la ciudad, y obtener puntos al visitarlos. Dichos puntos podrán canjearse por premios y experiencias en la ciudad.
+# SN Companion App
+Esta apliación tiene como objetivo ser un apoyo turísitico para los visitantes de la ciudad de San Nicolás de los Arroyos. La App permitirá conocer la historia de distintos puntos de interés de la ciudad.  
 
 ## Contexto del desarrollo  
-Esta aplicación está siendo desarrollada como proyecto de final del curso _"Desarrollo de Aplicaciones"_, dictado por Coderhouse. La consigna consiste en desarrollar una aplicación de temática a elección, en la cual se integren los conceptos vistos en clase.  
+Esta aplicación fue desarrollada como proyecto de final del curso _"Desarrollo de Aplicaciones"_, dictado por Coderhouse. La consigna consiste en desarrollar una aplicación de temática a elección, en la cual se integren los conceptos vistos en clase.  
 
 ## Ejecución del proyecto
 Clonación del repositorio:
@@ -24,25 +23,37 @@ npm start
 
 Luego, la aplicación puede ejecutarse desde el cliente de _Expo_ o desde una máquina virtual en _Android Studio_.
 
+## Dependencias utilizadas
+- Firebase Auth: servicio de autenticación en la nube.
+- Firebase Realtime Database: base de datos NoSQL en la nube, utilizada para almacenar los datos de la aplicación.
+- SQLite: base de datos SQL utilizada para almacenar información de forma local en el dispositivo.
+- Axios: cliente HTTP utilizado para realizar consultas a la API.
+- React navigation: librería utilizada para gestionar la navegación de la aplicación.
+- Masonry list: librería utilizada para crear listas con formato masonry.
+- Barcode scanner: librería utilizada para escanear códigos QR y gestionar los permisos de la cámara.
+
 ## Información sobre las pantallas
-![alt text](https://raw.githubusercontent.com/fedesummo/coder_mobile_app/main/wireframe/All_Screens.png)
+<!-- ![alt text](https://raw.githubusercontent.com/fedesummo/coder_mobile_app/main/wireframe/All_Screens.png) -->
 
-### Splash
-Permite que se carguen en segundo plano los elementos necesarios para la ejecución de la app.
+### Inicio de sesión
+Autenticación del usuario.
 
-### Bienvenida
-Solicita al usuario que introduzca su nombre, el cual será utilizado para personalizar la experiencia en la aplicación.
+### Registro
+Alta de usuario en la base de datos.
+
+### Inicio
+Acceso a las distintas pantallas de la aplicación.
 
 ### Descubrí
-Lista de lugares de interés público de la ciudad.
+Lista de distintos puntos de la ciudad.
 
-### Menú
-Permite navegar entre las distintas pantallas de la aplicación.
+### Mapa
+Visualización de los puntos en Google Maps.
 
-### Beneficios
-Permite canjear los puntos del usuario por premios y experiencias reales.
+### QR Escáner
+Apartado de cámara para escanear códigos QR.
 
 ## Acerca del desarrollador
-Mi nombre es Federico Summo, tengo 22 años, y soy estudiante de _Desarrollo Web Full Stack_ y _Desarrollo de Aplicaciones Móviles_.
+Mi nombre es Federico Summo, tengo 22 años, y soy estudiante de _Desarrollo Web_ y _Desarrollo de Aplicaciones Móviles_.
 Actualmente trabajo como desarrollador para el municipio de San Nicolás de los Arroyos, realizando aplicaciones web útiles para los habitantes de la ciudad.
 Me encantaría hacer conexión con los interesados en este proyecto, por lo que dejo a continuación mi perfil de [LinkedIn](https://www.linkedin.com/in/federico-summo/).

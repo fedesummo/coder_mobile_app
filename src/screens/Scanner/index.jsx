@@ -7,17 +7,12 @@ import styles from "./styles";
 
 const Scanner = () => {
   const [hasScannerPermissions, setHasScannerPermissions] = useState(null);
-  const [scanned, setScanned] = useState(false);
 
   const navigation = useNavigation();
 
   const handleBarCodeScanned = ({ data }) => {
-    setScanned(true);
-    Alert.alert(
-      "¡Código escaneado!",
-      "El código QR se ha escaneado correctamente",
-      [{ text: "Volver", onPress: () => setScanned(false) }]
-    );
+    const id = +data;
+    navigation.navigate("Place", { id });
   };
 
   useEffect(() => {
@@ -34,13 +29,13 @@ const Scanner = () => {
         setHasScannerPermissions(false);
       }
     })();
-  }, []);
+  }, [setHasScannerPermissions]);
 
   useEffect(() => {
     if (!hasScannerPermissions) {
       navigation.navigate("Home");
     }
-  }, [hasScannerPermissions]);
+  });
 
   return (
     <View style={styles.screenContainer}>
@@ -48,7 +43,7 @@ const Scanner = () => {
         <BackBtn />
       </View>
       <BarCodeScanner
-        onBarCodeScanned={scanned ? undefined : handleBarCodeScanned}
+        onBarCodeScanned={handleBarCodeScanned}
         style={styles.scanner}
       />
     </View>

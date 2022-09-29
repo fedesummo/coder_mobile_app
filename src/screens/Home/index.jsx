@@ -1,22 +1,24 @@
 import { SafeAreaView, Header, Section, LinkBtn } from "~components";
-import { useCallback, useMemo } from "react";
 import { FlatList, View } from "react-native";
-import { places } from "~constants";
+import { useCallback, useMemo } from "react";
+import { useSelector } from "react-redux";
 import styles from "./styles";
 
-const test = () => <View style={{ height: 50 }}></View>;
-
 const Home = () => {
-  const getMostVisitedPlaces = useCallback(() => {
-    const randomPlaces = [];
-    for (let i = 0; i < 4; i++) {
-      randomPlaces.push(places[Math.floor(Math.random() * places.length)]);
-    }
-    return randomPlaces;
-  }, [places]);
+  const places = useSelector(({ places }) => places.list);
 
-  const components = useMemo(
-    () => [
+  const getPlacesByIds = useCallback(
+    (ids) => ids.map((id) => places.find((place) => place.id === id)),
+    [places]
+  );
+
+  const components = useMemo(() => {
+    const mostVisitedPlaces = getPlacesByIds([26, 19, 4, 10]);
+    const touristCircuitPlaces = getPlacesByIds([3, 7, 12, 6]);
+    const gastronomyPlaces = getPlacesByIds([19, 22, 20, 18]);
+    const accommodationPlaces = getPlacesByIds([15, 16, 23, 25]);
+
+    return [
       <View style={styles.btnsCnt}>
         <LinkBtn
           text="QR Escáner"
@@ -28,41 +30,40 @@ const Home = () => {
       </View>,
       <Section
         heading="Los más visitados"
-        data={getMostVisitedPlaces()}
+        data={mostVisitedPlaces}
         category={null}
       />,
       <Section
         heading="Circuito turístico"
-        data={getMostVisitedPlaces()}
+        data={touristCircuitPlaces}
         category="tourist-circuit"
       />,
       <Section
         heading="Gastronomía"
-        data={getMostVisitedPlaces()}
+        data={gastronomyPlaces}
         category="gastronomy"
       />,
       <Section
         heading="Alojamiento"
-        data={getMostVisitedPlaces()}
+        data={accommodationPlaces}
         category="accommodation"
       />,
-    ],
-    []
-  );
+    ];
+  }, [getPlacesByIds]);
 
   const renderItem = useCallback(({ item }) => item, []);
 
-  return (
+  return places.length ? (
     <SafeAreaView>
       <FlatList
         data={components}
-        renderItem={renderItem}
         style={styles.listCnt}
+        renderItem={renderItem}
         ListHeaderComponent={<Header heading="¡Bienvenido!" />}
-        ItemSeparatorComponent={() => <View style={{ height: 20 }} />}
+        ItemSeparatorComponent={() => <View style={styles.listGap} />}
       />
     </SafeAreaView>
-  );
+  ) : null;
 };
 
 export default Home;

@@ -8,7 +8,6 @@ const styles = StyleSheet.create({
     backgroundColor: "black",
   },
   bgImg: {
-    // opacity: 0.5,
     opacity: 0.3,
   },
   backBtn: { ...commonStyles.backBtn },

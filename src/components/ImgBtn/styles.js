@@ -13,7 +13,7 @@ const styles = StyleSheet.create({
     backgroundColor: "rgba(0, 0, 0, 0.5)",
     paddingVertical: 4,
     textAlign: "center",
-    fontSize: 21,
+    fontSize: 15,
     fontWeight: "500",
   },
 });

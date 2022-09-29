@@ -1,13 +1,15 @@
 import { Callout, Marker } from "react-native-maps";
 import { useRoute } from "@react-navigation/native";
 import { View, Text } from "react-native";
+import { useSelector } from "react-redux";
 import MapView from "react-native-maps";
-import { places } from "~constants";
 import { useMemo } from "react";
 import styles from "./styles";
 
 const Map = () => {
   const { params } = useRoute();
+
+  const places = useSelector(({ places }) => places.list);
 
   const initialRegion = useMemo(() => {
     const coordinates = params?.coordinates;

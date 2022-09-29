@@ -9,7 +9,7 @@ import styles from "./styles";
 const Discover = () => {
   const { params } = useRoute();
 
-  const places = useSelector(({ places }) => places.places);
+  const places = useSelector(({ places }) => places.list);
 
   const [placesList, setPlacesList] = useState([]);
 

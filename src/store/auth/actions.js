@@ -146,7 +146,7 @@ export const validateLocalResfreshToken = () => async (dispatch) => {
       grant_type: "refresh_token",
       refresh_token: refreshToken,
     });
-    console.log(res.data)
+    console.log(res.data);
     const { user_id } = res.data;
     dispatch({
       type: "SIGN_IN",

@@ -1,19 +1,20 @@
 import { Input, PrimaryBtn, SecondaryBtn } from "~components";
 import { useNavigation } from "@react-navigation/native";
-import { View, StyleSheet, Image } from "react-native";
 import { signIn } from "~store/auth/actions";
+import { View, Image } from "react-native";
 import snLogo from "./assets/sn-logo.png";
 import { useDispatch } from "react-redux";
 import { useState } from "react";
+import styles from "./styles";
 
 const SignIn = () => {
   const dispatch = useDispatch();
   const navigation = useNavigation();
 
-  const [email, setEmail] = useState("fede@mail.com");
+  const [email, setEmail] = useState("");
   const handleEmailChange = (input) => setEmail(input);
 
-  const [password, setPassword] = useState("123456");
+  const [password, setPassword] = useState("");
   const handlePasswordChange = (input) => setPassword(input);
 
   const submitForm = () => {
@@ -27,7 +28,6 @@ const SignIn = () => {
           <Image source={snLogo} style={styles.logo} />
         </View>
 
-        {/* Form */}
         <View>
           <Input
             placeholder="Introduce aquí tu email..."
@@ -55,30 +55,3 @@ const SignIn = () => {
 };
 
 export default SignIn;
-
-const styles = StyleSheet.create({
-  screenContainer: {
-    flex: 1,
-    justifyContent: "center",
-    alignItems: "center",
-  },
-  logoContainer: {
-    width: "80%",
-  },
-  formGap: {
-    marginVertical: 15,
-  },
-  signUpBtn: {
-    marginTop: 8,
-    textAlign: "center",
-  },
-  logo: {
-    width: "100%",
-    height: undefined,
-    aspectRatio: 2.2,
-  },
-  input: {
-    marginTop: 80,
-    marginBottom: 15,
-  },
-});

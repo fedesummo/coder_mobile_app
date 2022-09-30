@@ -19,7 +19,7 @@ export const axiosIdToken = axios.create({
   baseURL: `https://securetoken.googleapis.com/v1/token?key=${FIREBASE_API_KEY}`,
 });
 
-// Firebase Realtime Databse
+// Firebase Realtime Database
 export const axiosPlaces = axios.create({
   baseURL: "https://sn-mobile-8a480-default-rtdb.firebaseio.com/.json"
 });

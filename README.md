@@ -47,11 +47,15 @@ Acceso a las distintas pantallas de la aplicación.
 ### Descubrí
 Lista de distintos puntos de la ciudad.
 
+### Lugar
+Vista en detalle de un punto.
+
 ### Mapa
 Visualización de los puntos en Google Maps.
 
 ### QR Escáner
-Apartado de cámara para escanear códigos QR.
+Apartado de cámara para escanear códigos QR. Los códigos contienen una referencia a un lugar de la ciudad.    
+<img src="https://raw.githubusercontent.com/fedesummo/coder_mobile_app/main/src/assets/qr-code.png" height="200">
 
 ## Acerca del desarrollador
 Mi nombre es Federico Summo, tengo 22 años, y soy estudiante de _Desarrollo Web_ y _Desarrollo de Aplicaciones Móviles_.

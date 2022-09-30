@@ -1,9 +1,10 @@
 import { axiosSignUp, axiosSignIn, axiosIdToken } from "~api";
+import { Alert } from "react-native";
 import {
   saveRefreshTokenOnAuthDb,
   getLastRefreshTokenFromAuthDb,
+  deleteRefreshTokenFromAuthDb,
 } from "~db/auth";
-import { Alert } from "react-native";
 
 export const signUp =
   ({ email, password }) =>
@@ -131,7 +132,8 @@ export const signIn =
     }
   };
 
-export const signOut = () => (dispatch) => {
+export const signOut = () => async (dispatch) => {
+  await deleteRefreshTokenFromAuthDb();
   dispatch({
     type: "SIGN_OUT",
     payload: null,
@@ -146,7 +148,6 @@ export const validateLocalResfreshToken = () => async (dispatch) => {
       grant_type: "refresh_token",
       refresh_token: refreshToken,
     });
-    console.log(res.data);
     const { user_id } = res.data;
     dispatch({
       type: "SIGN_IN",
@@ -156,15 +157,3 @@ export const validateLocalResfreshToken = () => async (dispatch) => {
     console.log("error", error.response);
   }
 };
-
-// export const getUserData = () => async (dispatch) => {
-//   const
-//   try {
-//     const { data } = await axiosGetUserData.post("", {
-//       idToken: "IjYonIID4Lf65WjOaqH2kauUlim2",
-//     });
-//     console.log(data);
-//   } catch (error) {
-//     console.log(error.response);
-//   }
-// };

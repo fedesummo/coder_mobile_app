@@ -1,4 +1,4 @@
-import { ScreenContainer, BackBtn, Input, PrimaryBtn } from "~components";
+import { SafeAreaView, BackBtn, Input, PrimaryBtn } from "~components";
 import { signUp } from "~store/auth/actions";
 import { useDispatch } from "react-redux";
 import { View } from "react-native";
@@ -23,11 +23,11 @@ const SignUp = () => {
     );
 
   return (
-    <ScreenContainer style={styles.container}>
+    <SafeAreaView style={styles.screenCnt}>
       <View style={styles.backBtn}>
         <BackBtn />
       </View>
-      <View>
+      <View style={styles.formCnt}>
         <Input
           placeholder="Introduce aquí tu email..."
           value={email}
@@ -43,7 +43,7 @@ const SignUp = () => {
         />
         <PrimaryBtn text="Registrarse" onPress={submitForm} />
       </View>
-    </ScreenContainer>
+    </SafeAreaView>
   );
 };
 

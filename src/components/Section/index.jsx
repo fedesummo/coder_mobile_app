@@ -16,18 +16,21 @@ const Section = ({ heading, data, style, category }) => {
     }
   }, []);
 
-  const renderItem = useCallback(({ item, i }) => {
-    return (
-      <ImgBtn
-        data={item}
-        style={{
-          marginVertical: 7,
-          paddingHorizontal: 5,
-          height: getItemHeigth(i),
-        }}
-      />
-    );
-  }, [][getItemHeigth]);
+  const renderItem = useCallback(
+    ({ item, i }) => {
+      return (
+        <ImgBtn
+          data={item}
+          style={{
+            marginVertical: 7,
+            paddingHorizontal: 5,
+            height: getItemHeigth(i),
+          }}
+        />
+      );
+    },
+    [getItemHeigth]
+  );
 
   return (
     <View style={{ ...style, flex: 1 }}>

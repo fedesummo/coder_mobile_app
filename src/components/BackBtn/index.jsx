@@ -1,6 +1,7 @@
-import { StyleSheet, Pressable, Image } from "react-native";
 import { useNavigation } from "@react-navigation/native";
 import backArrowIcon from "./assets/back-arrow.png";
+import { Pressable, Image } from "react-native";
+import styles from "./styles";
 
 const BackBtn = () => {
   const navigation = useNavigation();
@@ -13,16 +14,3 @@ const BackBtn = () => {
 };
 
 export default BackBtn;
-
-const styles = StyleSheet.create({
-  container: {
-    alignItems: "flex-end",
-    width: 40,
-    padding: 10,
-    borderRadius: 20,
-    height: "100%",
-    justifyContent: "center",
-    backgroundColor: "rgba(0,0,0,0.4)",
-  },
-  icon: { width: "100%", height: undefined, aspectRatio: 1 },
-});

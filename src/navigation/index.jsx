@@ -1,16 +1,8 @@
+import { SignIn, SignUp, Home, Discover, Place, Scanner, Map } from "~screens";
 import { createDrawerNavigator } from "@react-navigation/drawer";
 import { NavigationContainer } from "@react-navigation/native";
 import { useSelector } from "react-redux";
 import { useMemo } from "react";
-import {
-  SignIn,
-  SignUp,
-  Home,
-  Discover,
-  Place,
-  Scanner,
-  Map,
-} from "~screens/index";
 
 const Drawer = createDrawerNavigator();
 

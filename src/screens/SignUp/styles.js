@@ -1,23 +1,21 @@
 import { StyleSheet } from "react-native";
 
 const styles = StyleSheet.create({
-  container: {
-    flex: 1,
+  screenCnt: {
     position: "relative",
     justifyContent: "center",
-    paddingHorizontal: "13%",
+    alignItems: "center",
   },
   backBtn: {
     position: "absolute",
     top: 40,
     left: 25,
   },
+  formCnt: {
+    width: "80%",
+  },
   formGap: {
     marginVertical: 15,
-  },
-  btn: {},
-  form: {
-    marginVertical: 60,
   },
 });
 

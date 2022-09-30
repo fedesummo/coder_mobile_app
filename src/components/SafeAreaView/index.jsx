@@ -1,12 +1,9 @@
 import { SafeAreaView } from "react-native";
 import styles from "./styles";
 
-const CustomSafeAreaView = ({ children }) => {
+const CustomSafeAreaView = ({ children, style }) => {
   return (
-    <SafeAreaView style={styles.cnt}>
-      {/* <StatusBar barStyle="dark-content" backgroundColor="transparent" translucent/> */}
-      {children}
-    </SafeAreaView>
+    <SafeAreaView style={{ ...styles.cnt, ...style }}>{children}</SafeAreaView>
   );
 };
 

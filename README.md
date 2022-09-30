@@ -1,5 +1,5 @@
 # SN Companion App
-Esta apliación tiene como objetivo ser un apoyo turísitico para los visitantes de la ciudad de San Nicolás de los Arroyos. La App permitirá conocer la historia de distintos puntos de interés de la ciudad.  
+Esta aplicación tiene como objetivo ser un apoyo turísitico para los visitantes de la ciudad de San Nicolás de los Arroyos. La App permitirá conocer la historia de distintos puntos de interés de la ciudad.  
 
 ## Contexto del desarrollo  
 Esta aplicación fue desarrollada como proyecto de final del curso _"Desarrollo de Aplicaciones"_, dictado por Coderhouse. La consigna consiste en desarrollar una aplicación de temática a elección, en la cual se integren los conceptos vistos en clase.  
@@ -33,7 +33,7 @@ Luego, la aplicación puede ejecutarse desde el cliente de _Expo_ o desde una m�
 - Barcode scanner: librería utilizada para escanear códigos QR y gestionar los permisos de la cámara.
 
 ## Información sobre las pantallas
-<!-- ![alt text](https://raw.githubusercontent.com/fedesummo/coder_mobile_app/main/wireframe/All_Screens.png) -->
+![app preview](https://raw.githubusercontent.com/fedesummo/coder_mobile_app/main/src/assets/app-preview.jpg)
 
 ### Inicio de sesión
 Autenticación del usuario.

@@ -1,67 +1,81 @@
-# SN Companion App
+# SN App - React Native 🚀​
 
-<src img="./src/assets/repository-header.jpg">
+<img src="./src/assets/repository-header.jpg">
 
-Esta aplicación tiene como objetivo ser un apoyo turísitico para los visitantes de la ciudad de San Nicolás de los Arroyos. La App permitirá conocer la historia de distintos puntos de interés de la ciudad.  
+## Tabla de contenidos
 
-## Contexto del desarrollo  
-Esta aplicación fue desarrollada como proyecto de final del curso _"Desarrollo de Aplicaciones"_, dictado por Coderhouse. La consigna consiste en desarrollar una aplicación de temática a elección, en la cual se integren los conceptos vistos en clase.  
+- [Descripción del proyecto](#descripción-del-proyecto)
+- [Contexto del desarrollo](#contexto-del-desarrollo)
+- [Capturas de pantalla](#capturas-de-pantalla)
+- [Instalación y ejecución de la aplicación](#instalación-y-ejecución-de-la-aplicación)
+- [Servicios y dependencias utilizadas](#servicios-y-dependencias-utilizadas)
+- [Escáner de códigos QR](#escáner-de-códigos-qr)
+- [Acerca del desarrollador](#acerca-del-desarrollador)
 
-## Ejecución del proyecto
-Clonación del repositorio:
-```sh
+## Descripción del proyecto
+
+La presente aplicación tiene como objetivo ser un apoyo turísitico para los visitantes de la ciudad de _San Nicolás de los Arroyos_, permitiendo conocer la historia de distintos puntos de interés de la localidad.
+
+## Contexto del desarrollo
+
+Esta aplicación fue desarrollada como proyecto de final del curso _"Desarrollo de Aplicaciones"_, dictado por Coderhouse. La consigna consistía en desarrollar una aplicación de temática a elección, en la cual se integraran los conceptos tratados a lo largo del curso.
+
+## Capturas de pantalla
+
+<img src="./src/assets/app-preview.jpg">
+
+## Instalación y ejecución de la aplicación
+
+1. Clonar el repositorio:
+
+```
 git clone https://github.com/fedesummo/coder_mobile_app
 ```
 
-Instalación de dependencias:
-```sh
+2. Ingresar al directorio del proyecto
+
+```
 cd coder_mobile_app
+```
+
+3. Instalar dependencias:
+
+```sh
 npm i
 ```
 
-Iniciación del servidor:
+4. Iniciar el servidor:
+
 ```sh
 npm start
 ```
 
-Luego, la aplicación puede ejecutarse desde el cliente de _Expo_ o desde una máquina virtual en _Android Studio_.
+Luego, la aplicación puede ejecutarse a través del cliente de _Expo_ desde un dispositivo físico o emulador iOS o Android.
 
-## Dependencias utilizadas
-- Firebase Auth: servicio de autenticación en la nube.
-- Firebase Realtime Database: base de datos NoSQL en la nube, utilizada para almacenar los datos de la aplicación.
-- SQLite: base de datos SQL utilizada para almacenar información de forma local en el dispositivo.
-- Axios: cliente HTTP utilizado para realizar consultas a la API.
-- React navigation: librería utilizada para gestionar la navegación de la aplicación.
-- Masonry list: librería utilizada para crear listas con formato masonry.
-- Barcode scanner: librería utilizada para escanear códigos QR y gestionar los permisos de la cámara.
+## Servicios y dependencias utilizadas
 
-## Información sobre las pantallas
-<img src="./src/assets/app-preview.jpg">
+| Nombre                                                                             | Detalle                                 |
+| ---------------------------------------------------------------------------------- | --------------------------------------- |
+| [Firebase Auth](https://firebase.google.com/docs/reference/rest/auth)              | Servicio de autenticación en la nube    |
+| [Firebase Realtime Database](https://firebase.google.com/docs/database/rest/start) | Base de datos NoSQL en la nube          |
+| [SecureStore](https://docs.expo.dev/versions/latest/sdk/securestore)               | Base de datos NoSQL local               |
+| [SplashScreen](https://docs.expo.dev/versions/latest/sdk/splash-screen)            | Pantalla de carga inicial               |
+| [Axios](https://axios-http.com)                                                    | Cliente HTTP                            |
+| [React navigation](https://reactnavigation.org/docs/getting-started)               | Gestor de navegación                    |
+| [React Redux](https://react-redux.js.org)                                          | Gestor de estado global                 |
+| [MapView](https://docs.expo.dev/versions/latest/sdk/map-view)                      | Gestor de mapas                         |
+| [Masonry list](https://www.npmjs.com/package/@react-native-seoul/masonry-list)     | Creación de listas con formato masonry |
+| [BarCodeScanner](https://docs.expo.dev/versions/latest/sdk/bar-code-scanner)       | Escáner de códigos QR                   |
 
-### Inicio de sesión
-Autenticación del usuario.
+## Escáner de códigos QR
 
-### Registro
-Alta de usuario en la base de datos.
+Desde el apartado correspondiente de la aplicación pueden escánearse códigos QR como el que se muestra debajo. Los códigos permiten acceder a la vista en detalle de los diferentes puntos de interés de la ciudad.
 
-### Inicio
-Acceso a las distintas pantallas de la aplicación.
-
-### Descubrí
-Lista de distintos puntos de la ciudad.
-
-### Lugar
-Vista en detalle de un punto.
-
-### Mapa
-Visualización de los puntos en Google Maps.
-
-### QR Escáner
-Apartado de cámara para escanear códigos QR. Los códigos contienen una referencia a un lugar de la ciudad.    
 <img src="./src/assets/qr-code.png" height="200">
 
 ## Acerca del desarrollador
-Mi nombre es Federico Summo, tengo 22 años, y soy estudiante de _Desarrollo Web_ y _Desarrollo de Aplicaciones Móviles_.
-Actualmente trabajo como desarrollador para el municipio de San Nicolás de los Arroyos, realizando aplicaciones web útiles para los habitantes de la ciudad.
-Me encantaría hacer conexión con los interesados en este proyecto, por lo que dejo a continuación mi perfil de
+
+Mi nombre es Federico Summo y soy estudiante de _Desarrollo Web_ y _Desarrollo de Aplicaciones Móviles_.  
+Actualmente trabajo como desarrollador en la _Secretaría de Innovación y Transformación Digital_ realizando aplicaciones útiles para los habitantes y visitantes de la ciudad.  
+Si estás interesado/a en este proyecto, puedes contactarme a través de mi perfil de
 [LinkedIn](https://www.linkedin.com/in/federico-summo/).

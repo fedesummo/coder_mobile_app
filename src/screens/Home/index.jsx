@@ -1,11 +1,17 @@
 import { SafeAreaView, Header, Section, LinkBtn } from "~components";
+import { useCallback, useMemo, useEffect } from "react";
+import { useSelector, useDispatch } from "react-redux";
+import { getPlaces } from "~store/places/actions";
 import { FlatList, View } from "react-native";
-import { useCallback, useMemo } from "react";
-import { useSelector } from "react-redux";
 import styles from "./styles";
 
 const Home = () => {
   const places = useSelector(({ places }) => places.list);
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    (async () => !places.length && dispatch(getPlaces()))();
+  }, [dispatch]);
 
   const getPlacesByIds = useCallback(
     (ids) => ids.map((id) => places.find((place) => place.id === id)),

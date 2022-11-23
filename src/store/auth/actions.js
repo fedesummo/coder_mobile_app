@@ -1,10 +1,10 @@
 import { axiosSignUp, axiosSignIn, axiosIdToken } from "~api";
 import { Alert } from "react-native";
 import {
-  saveRefreshTokenOnAuthDb,
-  getLastRefreshTokenFromAuthDb,
-  deleteRefreshTokenFromAuthDb,
-} from "~db/auth";
+  saveOnSecureStore,
+  getFromSecureStore,
+  deleteFromSecureStore,
+} from "~utils";
 
 export const signUp =
   ({ email, password }) =>
@@ -105,7 +105,7 @@ export const signIn =
         returnSecureToken: true,
       });
       const { refreshToken, localId } = data;
-      await saveRefreshTokenOnAuthDb(refreshToken);
+      await saveOnSecureStore("refreshToken", refreshToken);
       dispatch({
         type: "SIGN_IN",
         payload: { user_id: localId },
@@ -133,7 +133,7 @@ export const signIn =
   };
 
 export const signOut = () => async (dispatch) => {
-  await deleteRefreshTokenFromAuthDb();
+  await deleteFromSecureStore("refreshToken");
   dispatch({
     type: "SIGN_OUT",
     payload: null,
@@ -142,8 +142,7 @@ export const signOut = () => async (dispatch) => {
 
 export const validateLocalResfreshToken = () => async (dispatch) => {
   try {
-    const queryResult = await getLastRefreshTokenFromAuthDb();
-    const { refreshToken } = queryResult.rows._array[0];
+    const refreshToken = await getFromSecureStore("refreshToken");
     const res = await axiosIdToken.post("", {
       grant_type: "refresh_token",
       refresh_token: refreshToken,
@@ -154,6 +153,6 @@ export const validateLocalResfreshToken = () => async (dispatch) => {
       payload: { user_id },
     });
   } catch (error) {
-    console.log("error", error.response);
+    console.log("error", error);
   }
 };

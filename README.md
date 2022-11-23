@@ -1,4 +1,7 @@
 # SN Companion App
+
+<src img="./src/assets/repository-header.jpg">
+
 Esta aplicación tiene como objetivo ser un apoyo turísitico para los visitantes de la ciudad de San Nicolás de los Arroyos. La App permitirá conocer la historia de distintos puntos de interés de la ciudad.  
 
 ## Contexto del desarrollo  
@@ -33,7 +36,7 @@ Luego, la aplicación puede ejecutarse desde el cliente de _Expo_ o desde una m�
 - Barcode scanner: librería utilizada para escanear códigos QR y gestionar los permisos de la cámara.
 
 ## Información sobre las pantallas
-![app preview](https://raw.githubusercontent.com/fedesummo/coder_mobile_app/main/src/assets/app-preview.jpg)
+<img src="./src/assets/app-preview.jpg">
 
 ### Inicio de sesión
 Autenticación del usuario.
@@ -55,9 +58,10 @@ Visualización de los puntos en Google Maps.
 
 ### QR Escáner
 Apartado de cámara para escanear códigos QR. Los códigos contienen una referencia a un lugar de la ciudad.    
-<img src="https://raw.githubusercontent.com/fedesummo/coder_mobile_app/main/src/assets/qr-code.png" height="200">
+<img src="./src/assets/qr-code.png" height="200">
 
 ## Acerca del desarrollador
 Mi nombre es Federico Summo, tengo 22 años, y soy estudiante de _Desarrollo Web_ y _Desarrollo de Aplicaciones Móviles_.
 Actualmente trabajo como desarrollador para el municipio de San Nicolás de los Arroyos, realizando aplicaciones web útiles para los habitantes de la ciudad.
-Me encantaría hacer conexión con los interesados en este proyecto, por lo que dejo a continuación mi perfil de [LinkedIn](https://www.linkedin.com/in/federico-summo/).
+Me encantaría hacer conexión con los interesados en este proyecto, por lo que dejo a continuación mi perfil de
+[LinkedIn](https://www.linkedin.com/in/federico-summo/).
